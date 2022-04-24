@@ -2025,7 +2025,7 @@
 	}
 
 	header h2 + p {
-		font-size: 1.25em;
+		font-size: 1.5em;
 		margin-top: -1em;
 		line-height: 1.5em;
 	}
@@ -2934,7 +2934,7 @@
 		background: #444;
 		color: #bbb;
 		cursor: default;
-		height: 3.25em;
+		height: 3.5em;
 		left: 0;
 		line-height: 3.25em;
 		position: fixed;
@@ -2956,7 +2956,7 @@
 
 			#header h1 a {
 				color: #fff;
-				font-weight: 400;
+				font-weight: 450;
 				border: 0;
 			}
 
