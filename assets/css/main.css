@@ -112,7 +112,7 @@
 		color: rgb(0, 0, 0);
 		font-family: "Source Sans Pro", sans-serif;
 		font-size: 20pt;
-		font-weight: 300;
+		font-weight: 325;
 		line-height: 1.65em;
 		letter-spacing: -0.015em;
 	}
@@ -146,7 +146,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #000000;
-		font-weight: 300;
+		font-weight: 325;
 		line-height: 1em;
 		margin: 0 0 0.5em 0;
 	}
