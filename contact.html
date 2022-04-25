@@ -65,13 +65,24 @@
 									<input type="email" name="email" id="email" value="" required placeholder="Email*" />
 								</div>
 								<div class="col-12">
-									<p>Preferred Tour Time: (required)</p>
-									<input type="radio" id="morning" name="time" value="Morning" required>
-									<label for="morning">Morning</label><br>
-									<input type="radio" id="afternoon" name="time" value="Afternoon">
-									<label for="afternoon">Afternoon</label><br>
-									<input type="radio" id="evening" name="time" value="Evening">
-									<label for="evening">Evening</label>
+									<fieldset>
+										<legend>Preferred Tour Time: (required)</legend>
+										<p>
+											<label>
+												<input type="radio" name="time" value="Morning" required> Morning
+											</label>
+										</p>
+										<p>
+											<label>
+												<input type="radio" name="time" value="Afternoon"> Afternoon
+											</label>
+										</p>
+										<p>
+											<label>
+												<input type="radio" name="time" value="Evening"> Evening
+											</label>
+										</p>
+									</fieldset>
 								</div>
 								<div class="col-12">
 									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
