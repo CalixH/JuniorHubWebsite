@@ -2114,6 +2114,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	input[type="tel"],
 	select,
 	textarea {
@@ -2135,6 +2136,7 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="date"]:invalid,
 		input[type="tel"]:invalid,
 		select:invalid,
 		textarea:invalid {
@@ -2144,6 +2146,7 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="date"]:focus,
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
@@ -2177,6 +2180,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	input[type="tel"],
 	select {
 		height: 3em;
@@ -3372,6 +3376,7 @@
 		#cta input[type="text"],
 		#cta input[type="password"],
 		#cta input[type="email"],
+		#cta input[type="date"],
 		#cta input[type="tel"],
 		#cta select,
 		#cta textarea {
@@ -3383,6 +3388,7 @@
 			#cta input[type="text"]:focus,
 			#cta input[type="password"]:focus,
 			#cta input[type="email"]:focus,
+			#cta input[type="date"]:focus,
 			#cta input[type="tel"]:focus,
 			#cta select:focus,
 			#cta textarea:focus {
