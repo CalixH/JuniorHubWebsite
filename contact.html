@@ -53,7 +53,7 @@
 			<!-- Main -->
 				<section id="main" class="container medium">
 					<div class="box">
-						<form method="post" netlify data-netlify-recaptcha="true" name="tour">
+						<form method="post" netlify data-netlify-recaptcha="true" name="Book A Tour">
 							<div class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-12-mobilep">
 									<input type="text" name="name" id="name" value="" required placeholder="Name*" />
@@ -65,24 +65,14 @@
 									<input type="email" name="email" id="email" value="" required placeholder="Email*" />
 								</div>
 								<div class="col-12">
-									<fieldset>
-										<legend>Preferred Tour Time: (required)</legend>
-										<p>
-											<label>
-												<input type="radio" name="time" value="Morning" required> Morning
-											</label>
-										</p>
-										<p>
-											<label>
-												<input type="radio" name="time" value="Afternoon"> Afternoon
-											</label>
-										</p>
-										<p>
-											<label>
-												<input type="radio" name="time" value="Evening"> Evening
-											</label>
-										</p>
-									</fieldset>
+									<input type="radio" id="Morning" name="Time" value="Morning">
+									<label for="Morning">Morning</label>
+
+									<input type="radio" id="Afternoon" name="Time" value="Afternoon">
+									<label for="Afternoon">Afternoon</label>
+
+									<input type="radio" id="Evening" name="Time" value="Evening">
+									<label for="Evening">Evening</label>
 								</div>
 								<div class="col-12">
 									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
