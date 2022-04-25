@@ -2772,8 +2772,8 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #fff1e6;
-			color:rgb(231, 128, 3)
+			background-color: #e3e3e3;
+			color:rgb(218, 129, 13)
 		}
 
 		input[type="submit"]:active,
