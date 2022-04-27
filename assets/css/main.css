@@ -41,7 +41,8 @@
 	}
 
 	body {
-		line-height: 1;
+		line-height: 1.1;
+		background-color: #fffedc;
 	}
 
 	ol, ul {
@@ -150,8 +151,8 @@
 	body, input, select, textarea {
 		color: rgb(0, 0, 0);
 		font-family: "Source Sans Pro", sans-serif;
-		font-size: 20pt;
-		font-weight: 325;
+		font-size: 21pt;
+		font-weight: 330;
 		line-height: 1.65em;
 		letter-spacing: -0.015em;
 	}
@@ -3277,7 +3278,6 @@
 
 	#main {
 		padding: 4em 0;
-		background-color: #fffedc;
 	}
 
 		#main > header {
