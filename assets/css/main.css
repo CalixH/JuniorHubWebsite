@@ -2008,7 +2008,6 @@
 		margin: 0 auto;
 		max-width: calc(100% - 5em);
 		width: 60em;
-		background-color: #fffedc;
 	}
 
 		.container.xsmall {
@@ -3278,6 +3277,7 @@
 
 	#main {
 		padding: 4em 0;
+		background-color: #fffedc;
 	}
 
 		#main > header {
