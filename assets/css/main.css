@@ -3753,8 +3753,6 @@
 		line-height: 18px;
 		color: #b7b7b7;
 		margin-top: 5px;
-
-		background-image: url("../../images/todprev.jpg");
 	}
 	.tilesWrap li button {
 		background: transparent;
@@ -3818,6 +3816,7 @@
 		left: 0;
 		top: 0;
 		background: rgba(255, 255, 255, 0.02);
+		background-image: url("../../images/todprev.jpg");
 	}
 	.tilesWrap li:nth-child(1):before {
 		
