@@ -3731,7 +3731,7 @@
 		font-family: 'helvetica', san-serif;
 		min-height: 25vh;
 		background: #262a2b;
-	border: 1px solid #252727;
+		border: 1px solid #252727;
 		text-align: left;
 	}
 	.tilesWrap li h2 {
@@ -3742,6 +3742,7 @@
 		top: 50px;
 		right: 10px;
 		transition: all 0.3s ease-in-out;
+		background-image: url("../../images/todprev.jpg");
 	}
 	.tilesWrap li h3 {
 		font-size: 20px;
@@ -3818,7 +3819,10 @@
 		background: rgba(255, 255, 255, 0.02);
 	}
 	.tilesWrap li:nth-child(1):before {
-		background-image: url("../../images/todprev.jpg");
+		
+		background: #f2709c;
+	background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+	background: linear-gradient(to right, #ff9472, #f2709c);
 	}
 	.tilesWrap li:nth-child(2):before {
 		background: #f2709c;
