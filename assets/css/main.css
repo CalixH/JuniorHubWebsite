@@ -3744,14 +3744,14 @@
 		transition: all 0.3s ease-in-out;
 	}
 	.tilesWrap li h3 {
-		font-size: 20px;
-		color: #b7b7b7;
+		font-size: 22px;
+		color: #dadada;
 		margin-bottom: 5px;
 	}
 	.tilesWrap li p {
 		font-size: 16px;
 		line-height: 18px;
-		color: #b7b7b7;
+		color: #dedede;
 		margin-top: 5px;
 	}
 	.tilesWrap li button {
