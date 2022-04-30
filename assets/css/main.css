@@ -3742,7 +3742,6 @@
 		top: 50px;
 		right: 10px;
 		transition: all 0.3s ease-in-out;
-		background-image: url("../../images/todprev.jpg");
 	}
 	.tilesWrap li h3 {
 		font-size: 20px;
@@ -3754,6 +3753,8 @@
 		line-height: 18px;
 		color: #b7b7b7;
 		margin-top: 5px;
+
+		background-image: url("../../images/todprev.jpg");
 	}
 	.tilesWrap li button {
 		background: transparent;
