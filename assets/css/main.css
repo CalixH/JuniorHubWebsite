@@ -3730,6 +3730,8 @@
 		margin: 10px;
 		font-family: 'helvetica', san-serif;
 		min-height: 25vh;
+		background: #262a2b;
+	border: 1px solid #252727;
 		text-align: left;
 	}
 	.tilesWrap li h2 {
