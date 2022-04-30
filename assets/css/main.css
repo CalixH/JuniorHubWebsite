@@ -3818,7 +3818,7 @@
 		background: rgba(255, 255, 255, 0.02);
 	}
 	.tilesWrap li:nth-child(1):before {
-		background: #C9FFBF;
+		background-image: "images/todprev.jpg";
 	background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
 	background: linear-gradient(to right, #FFAFBD, #C9FFBF);
 	}
