@@ -3819,8 +3819,7 @@
 	}
 	.tilesWrap li:nth-child(1):before {
 		
-	background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
-	background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+
 	background-image: "images/todprev.jpg";
 	}
 	.tilesWrap li:nth-child(2):before {
