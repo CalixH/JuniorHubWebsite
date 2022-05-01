@@ -3867,7 +3867,10 @@
 		margin-bottom: 20px;
 	}
 	
-
+	.big li p {
+		font: inherit;
+		font-size: 120%;
+	}
 
 
 /* Mobile */
