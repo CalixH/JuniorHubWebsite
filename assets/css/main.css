@@ -3868,9 +3868,9 @@
 	}
 	
 	.big li p {
-		font: 12px/1.5 Helvetica, sans-serif;
+		font: 24px/1.5 Arial, sans-serif;
   padding-left: 60px;
-  color: #555;
+  color: rgb(16, 16, 16);
 	}
 
 
