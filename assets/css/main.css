@@ -3868,8 +3868,9 @@
 	}
 	
 	.big li p {
-		font: inherit;
-		font-size: 120%;
+		font: 12px/1.5 Helvetica, sans-serif;
+  padding-left: 60px;
+  color: #555;
 	}
 
 
