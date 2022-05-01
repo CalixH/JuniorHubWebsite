@@ -3856,6 +3856,18 @@
 	background: linear-gradient(to right, #0ABFBC, #FC354C);
 	}
 
+	.big {
+		color: #ccc;
+		list-style-type: none;
+	}
+	 
+	.big li {
+		position: relative;
+		font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+		margin-bottom: 20px;
+	}
+	
+
 
 
 /* Mobile */
