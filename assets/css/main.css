@@ -3760,9 +3760,9 @@
 	}
 	.tilesWrap li button {
 		background: transparent;
-		border: 1px solid #b7b7b7;
+		border: 1px solid #727272;
 		padding: 10px 20px;
-		color: #b7b7b7;
+		color: #727272;
 		border-radius: 3px;
 		position: relative;
 		transition: all 0.3s ease-in-out;
