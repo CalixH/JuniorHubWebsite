@@ -3776,7 +3776,6 @@
 		position: absolute;
 		height: 100%;
 		width: 120%;
-		background: #b7b7b7;
 		top: 0;
 		opacity: 0;
 		left: -140px;
@@ -3789,7 +3788,9 @@
 		transform: translateY(5px);
 		opacity: 1;
 	}
-	
+	.tilesWrap li button:hover {
+		color: #262a2b;
+	}
 	.tilesWrap li button:hover:before {
 		left: 0;
 		opacity: 1;
@@ -3825,7 +3826,7 @@
 	}
 
 	.button1:hover {
-		color: rgba(252, 255, 87, 0.517)
+		background: rgba(252, 255, 87, 0.517)
 	}
 
 	.tilesWrap li:nth-child(2):after {
@@ -3833,7 +3834,7 @@
 	}
 
 	.button2:hover {
-		color: rgba(87, 255, 126, 0.517)
+		background: rgba(87, 255, 126, 0.517)
 	}
 
 	.tilesWrap li:nth-child(3):after {
@@ -3841,7 +3842,7 @@
 	}
 
 	.button3:hover {
-		color: rgba(87, 174, 255, 0.517)
+		background: rgba(87, 174, 255, 0.517)
 	}
 
 	.tilesWrap li:nth-child(4):after {
@@ -3849,7 +3850,7 @@
 	}
 
 	.button4:hover {
-		color: rgba(255, 87, 87, 0.517)
+		background: rgba(255, 87, 87, 0.517)
 	}
 
 	.tilesWrap li:nth-child(1):before {
