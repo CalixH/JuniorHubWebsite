@@ -3789,9 +3789,7 @@
 		transform: translateY(5px);
 		opacity: 1;
 	}
-	.tilesWrap li button:hover {
-		color: #262a2b;
-	}
+	
 	.tilesWrap li button:hover:before {
 		left: 0;
 		opacity: 1;
