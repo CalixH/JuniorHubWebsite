@@ -84,27 +84,22 @@
 })(jQuery);
 
 
-var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
-var rootElement = document.documentElement;
+//Get the button:
+mybutton = document.getElementById("myBtn");
 
-function handleScroll() {
-  // Do something on scroll
-  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-  if (rootElement.scrollTop / scrollTotal > 0.8) {
-    // Show button
-    scrollToTopBtn.classList.add("showBtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
   } else {
-    // Hide button
-    scrollToTopBtn.classList.remove("showBtn");
+    mybutton.style.display = "none";
   }
 }
 
-function scrollToTop() {
-  // Scroll to top logic
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-scrollToTopBtn.addEventListener("click", scrollToTop);
-document.addEventListener("scroll", handleScroll);
