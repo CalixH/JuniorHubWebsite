@@ -64,7 +64,7 @@
 
 	.card .face.face1{
 		position: relative;
-		background: #333;
+		background: rgb(138, 3, 3);
 		display: flex;
 		justify-content: center;
 		align-content: center;
@@ -105,7 +105,7 @@
 	}
 
 	.card .face.face1 .content a{
-		transition: .5s;
+		transition: all .5s ease-in-out;
 	}
 
 	.card .face.face2{
