@@ -146,7 +146,6 @@
 	}
 	.card :hover button {
 		transform: translateY(5px);
-		opacity: 1;
 	}
 	.card button:hover {
 		color: #262a2b;
