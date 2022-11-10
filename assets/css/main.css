@@ -87,7 +87,7 @@
 	}
 
 	.card .face.face1 .content {
-		opacity: .2;
+		opacity: .6;
 		transition: 0.5s;
 		text-align: center;
 	}
