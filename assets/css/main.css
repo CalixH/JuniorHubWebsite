@@ -125,9 +125,9 @@
 		color: #727272;
 		border-radius: 3px;
 		position: relative;
-		transition: all 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out;
 		transform: translateY(-40px);
-		opacity: 0;
+		opacity: 1;
 		cursor: pointer;
 		overflow: hidden;
 	}
