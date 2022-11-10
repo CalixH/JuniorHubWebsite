@@ -144,6 +144,18 @@
 		transition: all 0.3s ease-in-out;
 		
 	}
+
+	.card .face.face2 .content:hover button {
+		transform: translateY(5px);
+		opacity: 1;
+	}
+	.card .face.face2 .content button:hover {
+		color: #262a2b;
+	}
+	.card .face.face2 .content button:hover:before {
+		left: 0;
+		opacity: 1;
+	}
 	
 
 
