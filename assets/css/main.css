@@ -56,7 +56,8 @@
 	.card {
 		position: relative;
 		float: left;
-		padding-right: 30px;	
+		padding-right: 50px;	
+		padding-left: -20px;
 	}
 
 	.card .face {
