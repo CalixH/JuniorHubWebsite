@@ -55,7 +55,7 @@
 
 	.card {
 		position: relative;
-		float: none;
+		display: inline-block;
 		padding-right: 30px;	
 	}
 
