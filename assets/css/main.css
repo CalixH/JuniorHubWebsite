@@ -126,7 +126,7 @@
 		border-radius: 3px;
 		position: relative;
 		transition: transform 0.3s ease-in-out;
-		transform: translateY(-40px);
+		transform: translateY(-10px);
 		opacity: 1;
 		cursor: pointer;
 		overflow: hidden;
@@ -144,9 +144,7 @@
 		transition: all 0.3s ease-in-out;
 		
 	}
-	.card :hover button {
-		transform: translateY(5px);
-	}
+
 	.card button:hover {
 		color: #262a2b;
 	}
