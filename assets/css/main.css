@@ -126,7 +126,7 @@
 
 	}
 
-	.card li button {
+	.card .face.face2 .content li button {
 		background: transparent;
 		border: 1px solid #727272;
 		padding: 10px 20px;
@@ -139,7 +139,7 @@
 		cursor: pointer;
 		overflow: hidden;
 	}
-	.card li button:before {
+	.card .face.face2 .content li button:before {
 		content: '';
 		position: absolute;
 		height: 100%;
@@ -152,17 +152,7 @@
 		transition: all 0.3s ease-in-out;
 		
 	}
-	.card li:hover button {
-		transform: translateY(5px);
-		opacity: 1;
-	}
-	.card li button:hover {
-		color: #262a2b;
-	}
-	.card li button:hover:before {
-		left: 0;
-		opacity: 1;
-	}
+	
 
 
 	.check-list {
