@@ -118,7 +118,7 @@
 
 	}
 
-	.card .face.face2 .content li button {
+	.card .face.face2 .content button {
 		background: transparent;
 		border: 1px solid #727272;
 		padding: 10px 20px;
@@ -131,7 +131,7 @@
 		cursor: pointer;
 		overflow: hidden;
 	}
-	.card .face.face2 .content li button:before {
+	.card .face.face2 .content button:before {
 		content: '';
 		position: absolute;
 		height: 100%;
