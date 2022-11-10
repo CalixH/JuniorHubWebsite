@@ -53,6 +53,14 @@
 		list-style: none;
 	}
 
+	.consp {
+		width: 1400px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
 	.card {
 		position: relative;
 	}
