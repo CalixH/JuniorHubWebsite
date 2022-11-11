@@ -156,8 +156,8 @@
 	}
 	
 	.carousel {
-		width: 500px;
     position: relative;
+		justify-content: center;
     overflow: hidden;
     border: 10px solid #ffffff;
     border-radius: 8px;
