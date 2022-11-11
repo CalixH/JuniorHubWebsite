@@ -157,7 +157,7 @@
 	
 	.carousel {
     position: relative;
-		justify-items: center;
+		margin: auto;
     overflow: hidden;
     border: 10px solid #ffffff;
     border-radius: 8px;
