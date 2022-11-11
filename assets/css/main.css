@@ -163,10 +163,11 @@
     border-radius: 8px;
     box-shadow: -1px 5px 15px black;
 		display: block;
+		width: 80%;
 	}
 
 	.wrap{
-		width: 80%;
+		width: 100%;
     display: flex;
     animation: slide 16s infinite;
 	}
