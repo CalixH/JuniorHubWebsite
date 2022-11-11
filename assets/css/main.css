@@ -166,7 +166,7 @@
 	}
 
 	.wrap{
-		width: 100%;
+		width: 80%;
     display: flex;
     animation: slide 16s infinite;
 	}
