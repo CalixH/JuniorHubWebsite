@@ -170,7 +170,6 @@
 	.wrap{
 		width: 100%;
     display: flex;
-		position: absolute;
     animation: slide 120s infinite;
 	}
 
