@@ -169,23 +169,23 @@
 	.wrap{
 		width: 100%;
     display: flex;
-    animation: slide 16s infinite;
+    animation: slide 120s infinite;
 	}
 
 	@keyframes slide{
     0%{
         transform: translateX(0);
     }
-    25%{
+    2%{
         transform: translateX(0);
     }
-    30%{
+    3%{
         transform: translateX(-100%);
     }
-    50%{
+    5%{
         transform: translateX(-100%);
     }
-    55%{
+    6%{
         transform: translateX(-200%);
     }
     75%{
