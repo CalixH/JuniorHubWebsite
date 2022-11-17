@@ -158,13 +158,13 @@
 	.carousel {
     position: relative;
 		margin: auto;
-    overflow: hidden;
+    overflow: auto;
     border: 10px solid #ffffff;
     border-radius: 8px;
     box-shadow: -1px 5px 15px black;
 		display: block;
 		width: 80%;
-		height:1200;
+		height:auto;
 	}
 
 	.wrap{
