@@ -177,6 +177,7 @@
 	.carousel .wrap img {
 		max-width: 100%;
 		object-fit: contain;
+		object-position: left top;
 
 	}
 
