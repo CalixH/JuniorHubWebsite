@@ -174,10 +174,8 @@
     animation: slide 120s infinite;
 	}
 
-	.carousel .wrap .img {
-		float: left;
-		width: 500px;
-		height: 500px;
+	.carousel .wrap img {
+		width: 100%;
 		object-fit: cover;
 
 	}
