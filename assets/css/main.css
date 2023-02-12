@@ -4368,12 +4368,13 @@
 	}
 
 	#popup {
-		background-color:white; 
+		background-color:rgb(245, 120, 120); 
 		color:black;
+		width:60%;
 	}
-	@media screen and (min-width: 620px) {
+	@media screen and (max-width: 480px) {
 		#popup {
-			width:60%;
+			width:100%;
 		}
 	}
 /* Mobile (Portrait) */
