@@ -4371,7 +4371,7 @@
 		background-color:rgb(255, 255, 255); 
 		color:black;
 		width:60%;
-		text-align:center;
+		justify-content:center;
 	}
 	@media screen and (max-width: 480px) {
 		#popup {
