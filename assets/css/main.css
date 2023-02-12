@@ -4316,7 +4316,7 @@
 		/* Banner */
 
 			#banner {
-				padding: 1em 4em 4em 0;
+				padding: 1em 4em 4em;
 			}
 
 				#banner h2 {
@@ -4367,6 +4367,15 @@
 
 	}
 
+	#popup {
+		background-color:white; 
+		color:black;
+	}
+	@media screen and (min-width: 620px) {
+		#popup {
+			width:60%;
+		}
+	}
 /* Mobile (Portrait) */
 
 	@media screen and (max-width: 480px) {
