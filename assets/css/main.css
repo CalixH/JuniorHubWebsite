@@ -61,7 +61,7 @@
 
 	.card .face {
 		width: 15rem;
-		height: 15rem;
+		height: 18rem;
 	}
 
 	.card .face.face1{
@@ -73,7 +73,7 @@
 		align-items: center;
 		z-index: 1;
 		transition: transform 0.4s ease-in-out;
-		transform: translateY(100px);
+		transform: translateY(9rem);
 	}
 
 	.card:hover .face.face1 {
