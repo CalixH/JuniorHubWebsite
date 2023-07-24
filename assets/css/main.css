@@ -88,13 +88,13 @@
 	}
 
 	.card .face.face1 .content i{
-		font-size: 3rem;
+		font-size: 4rem;
 		color: white;
 		display: inline-block;
 	}
 
 	.card .face.face1 .content h3{
-		font-size: 1rem;
+		font-size: 2rem;
 		color: white;
 		text-align: center;
 	}
