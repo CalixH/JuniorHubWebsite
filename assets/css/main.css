@@ -120,10 +120,16 @@
 
 	}
 
+	.card .face.face2 p{
+		font-size: 90%; 
+		line-height: 90%;
+		padding-bottom: -1rem;
+	}
+
 	.card button {
 		background: transparent;
 		border: 1px solid #727272;
-		padding: 0px 20px 20px;
+		padding: 10px 20px;
 		color: #727272;
 		border-radius: 3px;
 		position: relative;
