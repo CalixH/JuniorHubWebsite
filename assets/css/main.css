@@ -124,7 +124,8 @@
 		font-size: 90%; 
 		line-height: 90%;
 		margin-top: 30px;
-		padding-bottom: -3rem;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	.card button {
