@@ -2520,7 +2520,6 @@ header h6 + p {
 }
 
 header.major {
-  padding: 1em 0;
   text-align: center;
 }
 
@@ -2990,7 +2989,6 @@ ul.alt {
 
 ul.alt li {
   border-top: solid 1px #e5e5e5;
-  padding: 0.5em 0;
 }
 
 ul.alt li:first-child {
