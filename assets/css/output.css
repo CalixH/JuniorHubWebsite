@@ -10051,7 +10051,7 @@ body.landing #page-wrapper {
 #banner {
   background-attachment: scroll, fixed;
   background-color: #666;
-  background-image: url("../../images/c4.JPG"), url("../../images/p1.JPG");
+  background-image: url("images/over2.png"), url("../../images/p1.JPG");
   background-position: top left, center center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
