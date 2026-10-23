@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Book a Tour" description="Book a tour of Junior Hub Child Care & Learning Centre.">
+    <section id="banner">
+      <h2>Book a Private Tour</h2>
+    </section>
+
+    <!-- Main -->
+    <section id="main" class="container medium">
+      <div class="box">
+        <form
+          method="post"
+          action="/thanks"
+          netlify
+          data-netlify-recaptcha="true"
+          name="Book A Tour"
+        >
+          <div class="row gtr-50 gtr-uniform">
+            <div class="col-6 col-12-mobilep">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value=""
+                required
+                placeholder="Name*"
+              />
+            </div>
+            <div class="col-6 col-12-mobilep">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                value=""
+                placeholder="Phone"
+              />
+            </div>
+            <div class="col-12">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value=""
+                required
+                placeholder="Email*"
+              />
+            </div>
+            <div class="col-12">
+              <p>Preferred Tour Time: (required)</p>
+              <input type="radio" name="Time" id="Time" value="Time" />
+              <input type="radio" name="Time" id="Morning" value="Morning" />
+              <label for="Morning">Morning</label>
+              <input
+                type="radio"
+                name="Time"
+                id="Afternoon"
+                value="Afternoon"
+              />
+              <label for="Afternoon">Afternoon</label>
+              <input
+                type="radio"
+                name="Time"
+                id="Evening"
+                value="Evening"
+                required
+              />
+              <label for="Evening">Evening</label>
+            </div>
+            <div class="col-12">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Enter your message"
+                rows="6"
+              ></textarea>
+            </div>
+            <div data-netlify-recaptcha="true" class="col-12"></div>
+            <div class="col-12">
+              <ul class="actions special">
+                <li><input type="submit" value="Send Message" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+</Layout>

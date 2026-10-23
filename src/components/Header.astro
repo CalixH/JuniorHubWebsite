@@ -1,0 +1,33 @@
+---
+import { nav } from "../data/site";
+---
+<!-- Header -->
+<header id="header" class="alt">
+  <img style="float: left" src="/images/jhlogo.png" width="5%" height="100%" alt="" />
+  <h1 style="font-size: 1.5em; font-weight: bold; margin-left: 4rem">
+    <a href="/">Junior Hub</a>
+  </h1>
+  <nav id="nav">
+    <ul>
+      {
+        nav.map((item) => (
+          <li style="font-size: 1.2em; font-weight: bold">
+            <a
+              href={item.href}
+              class={item.button ? "button" : item.children ? "icon solid fa-angle-down" : undefined}
+            >
+              {item.label}
+            </a>
+            {item.children && (
+              <ul>
+                {item.children.map((child) => (
+                  <li><a href={child.href}>{child.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

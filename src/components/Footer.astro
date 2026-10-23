@@ -1,0 +1,26 @@
+---
+import { site } from "../data/site";
+const year = new Date().getFullYear();
+---
+<!-- Footer -->
+<footer id="footer">
+  <ul class="icons">
+    {
+      site.social.map((s) => (
+        <li>
+          <a href={s.href} class={s.icon}><span class="label">{s.label}</span></a>
+        </li>
+      ))
+    }
+    <li>
+      <a href={`mailto:${site.email}`} class="icon fa-envelope"><span class="label">Email</span></a>
+    </li>
+    <li>
+      <a href={site.mapUrl} class="icon solid fa-map-marker-alt"><span class="label">Map</span></a>
+    </li>
+  </ul>
+  <ul class="copyright">
+    <li>&copy; {year} {site.fullName}. All rights reserved.</li>
+    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+  </ul>
+</footer>

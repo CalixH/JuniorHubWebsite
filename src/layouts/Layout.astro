@@ -1,0 +1,78 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const defaultDescription =
+  "Junior Hub is a licensed child care and learning centre offering toddler, preschool, kindergarten and summer camp programs.";
+const { title, description = defaultDescription, noindex = false } = Astro.props;
+const fullTitle = title ? `${title} | Junior Hub` : "Junior Hub | Child Care & Learning Centre";
+// build.format is "file", so pathnames can end in .html; publish the clean URL.
+const cleanPath = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/") || "/";
+const canonical = new URL(cleanPath, Astro.site).toString();
+
+// Optional Google Analytics 4. Set PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in Netlify's
+// environment variables to turn it on. Leave unset for no tracking.
+const gaId = import.meta.env.PUBLIC_GA_ID;
+---
+
+<!doctype html>
+<!--
+  Alpha by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/images/jhlogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL("/images/jhlogo.png", Astro.site).toString()} />
+    <link rel="stylesheet" href="/assets/css/output.css" />
+    {
+      gaId && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+          <script is:inline define:vars={{ gaId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", gaId);
+          </script>
+        </>
+      )
+    }
+  </head>
+  <body class="landing is-preload">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">☝️</button>
+    <div id="page-wrapper">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+
+    <!-- Scripts -->
+    <script is:inline src="/assets/js/jquery.min.js"></script>
+    <script is:inline src="/assets/js/jquery.dropotron.min.js"></script>
+    <script is:inline src="/assets/js/jquery.scrollex.min.js"></script>
+    <script is:inline src="/assets/js/browser.min.js"></script>
+    <script is:inline src="/assets/js/breakpoints.min.js"></script>
+    <script is:inline src="/assets/js/util.js"></script>
+    <script is:inline src="/assets/js/main.js"></script>
+  </body>
+</html>
