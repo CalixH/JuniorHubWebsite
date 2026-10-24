@@ -6,6 +6,7 @@
   NODE_VERSION = "22"
 
 # Old links ended in .html. Send them to the clean URL.
+# One explicit rule per page: wildcard/placeholder patterns misbehave with file extensions.
 [[redirects]]
   from = "/index.html"
   to = "/"
@@ -13,8 +14,86 @@
   force = true
 
 [[redirects]]
-  from = "/:page.html"
-  to = "/:page"
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contactus.html"
+  to = "/contactus"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery.html"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hiring.html"
+  to = "/hiring"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kindergarten.html"
+  to = "/kindergarten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nutrition.html"
+  to = "/nutrition"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pi.html"
+  to = "/pi"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/preschool.html"
+  to = "/preschool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/program.html"
+  to = "/program"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/register.html"
+  to = "/register"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/summercamp.html"
+  to = "/summercamp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/summercampregister.html"
+  to = "/summercampregister"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/toddler.html"
+  to = "/toddler"
   status = 301
   force = true
 
