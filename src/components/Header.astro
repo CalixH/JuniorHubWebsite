@@ -1,33 +1,43 @@
 ---
 import { nav } from "../data/site";
 ---
-<!-- Header -->
-<header id="header" class="alt">
-  <img style="float: left" src="/images/jhlogo.png" width="5%" height="100%" alt="" />
-  <h1 style="font-size: 1.5em; font-weight: bold; margin-left: 4rem">
-    <a href="/">Junior Hub</a>
-  </h1>
-  <nav id="nav">
-    <ul>
-      {
-        nav.map((item) => (
-          <li style="font-size: 1.2em; font-weight: bold">
-            <a
-              href={item.href}
-              class={item.button ? "button" : item.children ? "icon solid fa-angle-down" : undefined}
-            >
-              {item.label}
-            </a>
-            {item.children && (
-              <ul>
-                {item.children.map((child) => (
-                  <li><a href={child.href}>{child.label}</a></li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/images/jhlogo.png" alt="" width="44" height="44" />
+      <span>Junior Hub</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <ul>
+        {
+          nav.map((item) => (
+            <li class={item.children ? "has-sub" : undefined}>
+              <a href={item.href}>{item.label}</a>
+              {item.children && (
+                <ul>
+                  {item.children.map((child) => (
+                    <li><a href={child.href}>{child.label}</a></li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+        <li><a class="btn" href="/contact">Book a tour</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script is:inline>
+  (function () {
+    var header = document.querySelector(".site-header");
+    var button = header.querySelector(".nav-toggle");
+    button.addEventListener("click", function () {
+      var open = header.toggleAttribute("data-open");
+      button.setAttribute("aria-expanded", String(open));
+    });
+  })();
+</script>

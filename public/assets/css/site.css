@@ -1,0 +1,190 @@
+/* Junior Hub: "classroom labels" look. Loaded after the template's output.css.
+   Colours come from the logo (orange, sprout green). The one memorable element is the
+   name tag used for each room (.tag). Everything else stays plain.
+   Edit the tokens below to retheme the whole site. */
+
+:root {
+  --ink: #1f2a24;
+  --orange: #ff5f1f; /* logo orange: fills only, with ink text */
+  --orange-deep: #c73f08; /* orange that carries white text (5:1) */
+  --green: #7bcb6f; /* sprout, lightened so ink text passes */
+  --yellow: #ffd54a;
+  --tint: #fff3ea;
+  --line: #f0d9c8;
+  --muted: #52605a;
+  --font-display: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --wrap: 70rem;
+  --gutter: clamp(1.1rem, 4vw, 2.25rem);
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body,
+body input,
+body select,
+body textarea {
+  font-family: var(--font-body);
+  color: var(--ink);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+body { background: #fff; margin: 0; }
+body h1, body h2, body h3, body h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.12;
+}
+body a { color: var(--orange-deep); }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+.skip { position: absolute; left: -999px; top: 0; background: #fff; padding: 0.6rem 1rem; z-index: 100; }
+.skip:focus { left: 0; }
+/* The legacy template stylesheet also defines .wrap (an image-carousel track: flex, 100% size, sliding
+   animation). Reset those properties so this layout wrapper is not affected. */
+.wrap { display: block; width: auto; height: auto; animation: none; max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+
+/* Buttons (also restyles the template's .button on inner pages) */
+.btn,
+body .button,
+body input[type="submit"] {
+  display: inline-block;
+  background: var(--orange-deep);
+  color: #fff;
+  font: 700 1.05rem/1 var(--font-body);
+  padding: 0.95rem 1.4rem;
+  border: 2px solid var(--orange-deep);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  height: auto;
+}
+.btn:hover, body .button:hover, body input[type="submit"]:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: #fff; }
+.btn--ink { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn--ink:hover { background: #fff; color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.6rem 0 0; padding: 0; list-style: none; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 2px solid var(--line); }
+.site-header .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; max-width: var(--wrap); margin: 0 auto; padding: 0.6rem var(--gutter); }
+.brand { display: flex; align-items: center; gap: 0.65rem; font: 700 1.4rem/1 var(--font-display); color: var(--ink) !important; text-decoration: none; }
+.brand img { width: 44px; height: 44px; border-radius: 10px; display: block; }
+#site-nav { margin-left: auto; }
+#site-nav ul { list-style: none; margin: 0; padding: 0; }
+#site-nav > ul { display: flex; align-items: center; gap: 0.15rem; }
+#site-nav li { margin: 0; padding: 0; position: relative; }
+#site-nav a { display: block; padding: 0.55rem 0.8rem; color: var(--ink); font-weight: 700; font-size: 1rem; text-decoration: none; border-radius: 10px; }
+#site-nav a:hover { background: var(--tint); }
+#site-nav .btn { color: #fff; margin-left: 0.5rem; padding: 0.7rem 1.1rem; }
+#site-nav .btn:hover { background: var(--ink); }
+#site-nav .has-sub > a::after { content: ""; display: inline-block; margin-left: 0.4rem; border: 4px solid transparent; border-top-color: currentColor; border-bottom: 0; vertical-align: middle; }
+#site-nav .has-sub > ul { display: none; position: absolute; left: 0; top: 100%; min-width: 12.5rem; background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 0.4rem; }
+#site-nav .has-sub:hover > ul, #site-nav .has-sub:focus-within > ul { display: block; }
+.nav-toggle { display: none; margin-left: auto; background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: 0.5rem 1rem; font: 700 1rem var(--font-body); color: var(--ink); cursor: pointer; }
+@media (max-width: 62rem) {
+  .nav-toggle { display: block; }
+  #site-nav { display: none; width: 100%; margin: 0; }
+  .site-header[data-open] #site-nav { display: block; padding-bottom: 0.75rem; }
+  #site-nav > ul { flex-direction: column; align-items: stretch; }
+  #site-nav .has-sub > ul { display: block; position: static; border: 0; padding: 0 0 0 1rem; min-width: 0; }
+  #site-nav .has-sub > a::after { display: none; }
+  #site-nav .btn { margin: 0.5rem 0 0; text-align: center; }
+}
+
+/* Home: hero */
+.hero { background: var(--tint); }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(1.5rem, 5vw, 3.5rem); align-items: center; padding-block: clamp(2.25rem, 6vw, 4.75rem); }
+.hero h1 { font-size: clamp(2.4rem, 1.2rem + 4.6vw, 4.2rem); margin: 0 0 1.1rem; }
+.hero .lede { font-size: 1.3rem; max-width: 34rem; margin: 0; }
+.hero .avail { margin: 1.4rem 0 0; font-weight: 700; }
+.hero__photo { margin: 0; border-radius: 28px; overflow: hidden; border: 3px solid var(--ink); aspect-ratio: 4 / 3; background: var(--line); }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 52rem) { .hero .wrap { grid-template-columns: 1fr; } }
+
+/* Home: room name tags */
+.section { padding-block: clamp(2.75rem, 7vw, 5rem); }
+.section h2 { font-size: clamp(1.8rem, 1.2rem + 2.2vw, 2.7rem); margin: 0 0 0.6rem; }
+.section .intro { max-width: 40rem; margin: 0; color: var(--muted); }
+.tags { display: grid; grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr)); gap: 3.2rem 1.4rem; margin: 0; padding: 3.4rem 0 0; list-style: none; }
+.tags li { margin: 0; padding: 0; }
+.tag { position: relative; display: block; height: 100%; padding: 3.1rem 1.4rem 1.5rem; border-radius: 22px; color: var(--ink) !important; text-decoration: none; transform: rotate(var(--tilt, 0deg)); }
+.tag::before { content: ""; position: absolute; top: 1rem; left: 50%; width: 1.1rem; height: 1.1rem; margin-left: -0.55rem; border-radius: 50%; background: #fff; box-shadow: inset 0 2px 0 rgba(31, 42, 36, 0.35); }
+.tag::after { content: ""; position: absolute; top: -2.3rem; left: 50%; width: 2px; height: 3.45rem; margin-left: -1px; background: var(--ink); }
+.tag h3 { font-size: 2rem; margin: 0 0 0.3rem; }
+.tag .ages { font-weight: 700; margin: 0; }
+.tag .note { margin: 0.6rem 0 0; font-size: 1rem; }
+.tag .go { display: inline-block; margin-top: 1rem; font-weight: 700; border-bottom: 2px solid var(--ink); }
+.tag:hover .go { background: var(--ink); color: #fff; }
+.tag--orange { background: var(--orange); --tilt: -1.5deg; }
+.tag--green { background: var(--green); --tilt: 1deg; }
+.tag--yellow { background: var(--yellow); --tilt: -0.8deg; }
+.tag--ink { background: var(--ink); color: #fff !important; --tilt: 1.4deg; }
+.tag--ink::before { box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4); }
+.tag--ink::after { background: var(--ink); }
+.tag--ink .go { border-color: #fff; }
+.tag--ink:hover .go { background: #fff; color: var(--ink); }
+@media (max-width: 40rem) { .tag { --tilt: 0deg !important; } }
+
+/* Home: fees band, approach, visit */
+.band { background: var(--tint); }
+.band .wrap { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; }
+.band p { margin: 0.4rem 0 0; }
+.band h2 { margin: 0; }
+@media (max-width: 52rem) { .band .wrap { grid-template-columns: 1fr; } }
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.75rem 2.25rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+.points li { margin: 0; padding: 1.1rem 0 0; border-top: 4px solid var(--orange); }
+.points h3 { font-size: 1.35rem; margin: 0 0 0.35rem; }
+.points p { margin: 0; }
+.visit { background: var(--orange); }
+.visit .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center; }
+.visit h2 { font-size: clamp(2rem, 1.2rem + 3vw, 3.3rem); margin: 0; }
+.visit a:not(.btn) { color: var(--ink); font-weight: 700; }
+.visit .contact { list-style: none; margin: 0; padding: 0; font-size: 1.2rem; }
+.visit .contact li { margin: 0 0 0.5rem; padding: 0; }
+@media (max-width: 52rem) { .visit .wrap { grid-template-columns: 1fr; } }
+.hiring { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.6rem; border-top: 2px solid var(--line); }
+.hiring p { margin: 0; font-weight: 700; }
+.quote { text-align: center; padding-block: clamp(2.5rem, 6vw, 4rem); }
+.quote p { font: 500 clamp(1.4rem, 1rem + 1.6vw, 2rem)/1.3 var(--font-display); max-width: 40rem; margin: 0 auto 0.6rem; }
+.quote cite { color: var(--muted); font-style: normal; }
+.feed { margin-top: 1.5rem; }
+
+/* Footer */
+.site-footer { background: var(--ink); color: #fff; padding-block: 3rem 2rem; }
+.site-footer a { color: #fff; }
+.site-footer :focus-visible { outline-color: #fff; }
+.site-footer .grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 2rem; }
+.site-footer h2 { font-size: 1.1rem; color: #fff; margin: 0 0 0.6rem; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin: 0 0 0.35rem; padding: 0; }
+.site-footer p { margin: 0.6rem 0 0; }
+.site-footer .legal { margin-top: 2.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.95rem; }
+.site-footer .brand { color: #fff !important; }
+@media (max-width: 52rem) { .site-footer .grid { grid-template-columns: 1fr; } }
+
+/* Inner pages built on the template: banner, boxes, forms */
+body #banner { background: var(--ink) none; padding: clamp(2.5rem, 7vw, 4.5rem) max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); text-align: left; border-bottom: 6px solid var(--orange); }
+body #banner h2 { color: #fff; font-size: clamp(2.2rem, 1.3rem + 3.6vw, 3.6rem); margin: 0; }
+body #banner h2 span { color: #fff !important; font-size: inherit !important; }
+body #banner p { color: #fff; }
+body #main { padding: 3rem 0; }
+body .box { border-radius: 20px; border: 2px solid var(--line); box-shadow: none; }
+body .box.special { text-align: left; }
+body input[type="text"], body input[type="email"], body input[type="tel"], body input[type="date"], body textarea, body select { border: 2px solid var(--muted); border-radius: 10px; box-shadow: none; }
+body input:focus, body textarea:focus, body select:focus { border-color: var(--ink); }
+
+/* Fixes found in visual review */
+/* The legacy template underlines every link with a dotted border; our nav, logo and buttons should not have it. */
+#site-nav a, .brand, .site-footer a.brand, .btn, .tag { border-bottom: 0; }
+/* The dark tag's heading must be light: it sits on the ink background. */
+.tag--ink h3 { color: #fff; }
+/* .band is not a .section, so it needs its own vertical padding. */
+.band { padding-block: clamp(1.75rem, 4vw, 2.75rem); }
+h1, h2, .tag h3 { text-wrap: balance; }

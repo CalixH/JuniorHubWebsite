@@ -1,124 +1,143 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { site } from "../data/site";
 ---
 
-<Layout description="Junior Hub is a licensed child care and learning centre near Hwy 7, 407 and Yonge Street offering toddler, preschool, kindergarten and summer camp programs. CWELCC enrolled; fee subsidy available.">
-    <!-- Banner -->
-    <section id="banner">
-      <p id="popup">
-        Enroll in Canada-Wide Early Learning and Childcare System/Childcare! <br />
-        Fee subsidy is available
-      </p>
-      <h2>
-        <b
-          ><span
-            style="
-              font-family: 'Times New Roman', Times, serif;
-              font-size: 2.6em;
-              line-height: 80%;
-              color: #ff8000;
-              text-shadow: 0px 0px 2px #000;
-            "
-            >Junior Hub</span
-          ></b
-        >
-      </h2>
-      <p style="font-size: 2.3em">Child Care & Learning Centre</p>
-      <ul class="actions special">
-        <li style="font-size: 1.5em">
-          <a href="/contact" class="button">Book A Tour</a>
+<Layout
+  description="Junior Hub is a licensed child care and learning centre near Hwy 7, 407 and Yonge Street with toddler, preschool, kindergarten and summer camp programs. Enrolled in CWELCC; fee subsidy available."
+>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Licensed child care for ages 1½ to 6</h1>
+        <p class="lede">
+          Play-based days led by Registered Early Childhood Educators, near Hwy 7, 407 and Yonge Street.
+        </p>
+        <ul class="actions">
+          <li><a class="btn" href="/contact">Book a tour</a></li>
+          <li><a class="btn btn--ghost" href="/register">Join the waitlist</a></li>
+        </ul>
+        <p class="avail">Toddler, preschool, JK and SK spaces available.</p>
+      </div>
+      <figure class="hero__photo">
+        <img
+          src="/images/p1.JPG"
+          alt="A Junior Hub classroom with child-sized tables, coloured bins and shelves of learning materials"
+          width="1800"
+          height="1350"
+          fetchpriority="high"
+        />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Find your child's room</h2>
+      <p class="intro">Every room is led by Registered Early Childhood Educators. Pick an age to see how the day works.</p>
+      <ul class="tags">
+        <li>
+          <a class="tag tag--orange" href="/toddler">
+            <h3>Toddler</h3>
+            <p class="ages">1½ to 2½ years</p>
+            <span class="go">See the toddler room</span>
+          </a>
+        </li>
+        <li>
+          <a class="tag tag--green" href="/preschool">
+            <h3>Preschool</h3>
+            <p class="ages">2½ to 4 years</p>
+            <span class="go">See the preschool room</span>
+          </a>
+        </li>
+        <li>
+          <a class="tag tag--yellow" href="/kindergarten">
+            <h3>Kindergarten</h3>
+            <p class="ages">4 to 6 years</p>
+            <p class="note">Child must be 4 to 6 years old before June 30.</p>
+            <span class="go">See the kindergarten room</span>
+          </a>
+        </li>
+        <li>
+          <a class="tag tag--ink" href="/summercamp">
+            <h3>Summer camp</h3>
+            <p class="ages">PA days, March break and summer</p>
+            <span class="go">See camp details</span>
+          </a>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <!-- Main -->
-    <section id="main" class="container">
-      <section class="box special">
-        <h4>
-          <span style="font-weight: bold; font-size: 115%; color: #180658"
-            ><span style="color: black; font-size: 125%; font-weight: bolder"
-              >Toddler,Preschool, JK & SK</span
-            >
-            space available! <br />
-            <span style="color: red"
-              >PA Days, March Break, Summer Camp space available!</span
-            > <br />
-            Proudly enrolled in the Canada-Wide Early Learning & Child Care (CWELCC) System
-            <br />
-            <br />
-            Toddler <br />
-            (1.5yrs-2.5yrs) <br />
-            Preschool <br />
-            (2.5yrs-4yrs) <br />
-            Kindergarten <br />
-            (4yrs-6yrs before June 30th) <br />
-            <br /><span style="color: red"
-              >Refund includes PA Days, March Break, and Summer Camp</span
-            ><br />
-            <br />
-            For more details of CWELCC, please visit
-            <a
-              href="https://www.york.ca/support/childrens-services/child-care-information-parents"
-              target="_blank"
-              rel="noreferrer noopener"
-              >this link</a
-            > </span
-          > 
-        </h4>
-
-        <hr />
-        <script is:inline src="https://apps.elfsight.com/p/platform.js" defer></script>
-        <div class="elfsight-app-42d87d06-8681-46b0-bd00-befa29c45b50"></div>
-
-        <hr />
-
-        <h3>We are hiring new staff members!</h3>
-        <div class="col-12-mobilep">
-          <ul class="actions special">
-            <li>
-              <a href="/hiring" class="button">Hiring information</a>
-            </li>
-          </ul>
-        </div>
-        <hr />
-        <h2>
-          Every child is a different kind of flower. All together, <br />
-          we make this world a beautiful garden. <br />
-        </h2>
-        <p
-          style="
-            font-size: 1.3em;
-            color: rgb(97, 96, 96);
-            text-align: right;
-            padding-right: 40px;
-          "
-        >
-          <i>~ Brigette Barrager</i>
+  <section class="band">
+    <div class="wrap">
+      <div>
+        <h2>Fee subsidy is available</h2>
+        <p>
+          We are enrolled in the Canada-Wide Early Learning and Child Care (CWELCC) system. The refund includes PA days,
+          March break and summer camp.
+          <a href="https://www.york.ca/support/childrens-services/child-care-information-parents">York Region child care information</a>
         </p>
-      </section>
-    </section>
+      </div>
+      <a class="btn" href="/register">Join the waitlist</a>
+    </div>
+  </section>
 
-    <!-- CTA -->
-    <section id="cta">
-      <h2>Contact Us!</h2>
-      <p>Click the buttons below to learn more about us!</p>
+  <section class="section">
+    <div class="wrap">
+      <h2>How we care for children</h2>
+      <ul class="points">
+        <li>
+          <h3>Play-based days</h3>
+          <p>A secure, cheerful setting that supports each child's physical, social, emotional and cognitive growth.</p>
+        </li>
+        <li>
+          <h3>Registered educators</h3>
+          <p>Our Registered Early Childhood Educators are registered with the College of Early Childhood Educators.</p>
+        </li>
+        <li>
+          <h3>Easy to find</h3>
+          <p>We are at the corner of Hwy 7, 407 and Yonge Street.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-      <div class="col-12-mobilep">
-        <ul class="actions special">
-          <li><a href="/about" class="button">About Us</a></li>
-          <li>
-            <a href="/contactus" class="button">Contact information</a>
-          </li>
-          <li><a href="/contact" class="button">Book a tour</a></li>
-          <li>
-            <a href="/register" class="button">Join the waitlist</a>
-          </li>
-          <li>
-            <a href="/summercampregister" class="button"
-              >Summer camp registration</a
-            >
-          </li>
+  <section class="section visit">
+    <div class="wrap">
+      <div>
+        <h2>See the rooms in person</h2>
+        <ul class="actions">
+          <li><a class="btn btn--ink" href="/contact">Book a tour</a></li>
+          <li><a class="btn btn--ghost" href="/summercampregister">Register for summer camp</a></li>
         </ul>
       </div>
-    </section>
+      <ul class="contact">
+        <li><a href={`tel:${site.phone}`}>{site.phone}</a></li>
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li><a href={site.mapUrl}>Find us on the map</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>From our Instagram</h2>
+      <div class="feed">
+        <script is:inline src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-42d87d06-8681-46b0-bd00-befa29c45b50"></div>
+      </div>
+      <div class="hiring">
+        <p>We are hiring new staff members.</p>
+        <a class="btn btn--ghost" href="/hiring">See open positions</a>
+      </div>
+    </div>
+  </section>
+
+  <figure class="quote wrap">
+    <blockquote style="margin: 0; border: 0; padding: 0">
+      <p>Every child is a different kind of flower. All together, we make this world a beautiful garden.</p>
+    </blockquote>
+    <figcaption><cite>Brigette Barrager</cite></figcaption>
+  </figure>
 </Layout>
