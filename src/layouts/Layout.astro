@@ -69,5 +69,42 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
       <slot />
     </main>
     <Footer />
+    <button class="to-top" type="button" aria-label="Back to top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M12 19V5M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+    <script>
+      // Sticky header shadow and back-to-top button, driven by scroll position.
+      const header = document.querySelector(".site-header");
+      const toTop = document.querySelector(".to-top");
+      if (header && toTop) {
+        const SHOW_AFTER = 500; // px scrolled before the button appears
+        let queued = false;
+        const update = () => {
+          const y = window.scrollY;
+          header.classList.toggle("is-stuck", y > 4);
+          toTop.classList.toggle("is-visible", y > SHOW_AFTER);
+          queued = false;
+        };
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!queued) {
+              queued = true;
+              requestAnimationFrame(update);
+            }
+          },
+          { passive: true },
+        );
+        update();
+        toTop.addEventListener("click", () => {
+          const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+          // Keyboard users: put focus back at the start of the page; the button hides itself at the top.
+          document.querySelector(".brand")?.focus({ preventScroll: true });
+        });
+      }
+    </script>
   </body>
 </html>
