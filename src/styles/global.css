@@ -215,9 +215,9 @@ a:hover { text-decoration-color: var(--leaf); }
 }
 
 /* ---------- Home: hero ---------- */
-.hero { padding-block: clamp(2rem, 5vw, 4.5rem) clamp(3.5rem, 8vw, 6.5rem); overflow: hidden; }
+.hero { padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 7vw, 5.5rem); overflow: hidden; }
 .hero__grid { display: grid; gap: clamp(2.5rem, 6vw, 4.5rem); align-items: center; }
-.hero__lede { max-width: 33rem; margin-top: 1.4rem; font-size: var(--text-lede); line-height: 1.45; }
+.hero__lede { max-width: 30rem; text-wrap: pretty; margin-top: 1.2rem; font-size: var(--text-lede); line-height: 1.45; }
 .hero .actions { margin-top: 1.9rem; }
 .facts {
   display: grid;
@@ -229,12 +229,14 @@ a:hover { text-decoration-color: var(--leaf); }
 }
 .facts dt { font-family: var(--font-display); font-weight: 700; }
 .facts dd { margin: 0.1rem 0 0; color: var(--muted); font-size: var(--text-small); }
-.hero__art { position: relative; justify-self: center; width: min(100%, 30rem); margin-right: 1.1rem; }
+.hero__art { position: relative; justify-self: center; width: min(100%, 36rem); margin-right: 1.25rem; }
 .hero__art::before { content: ""; position: absolute; inset: 1.25rem -1.25rem -1.25rem 1.25rem; border-radius: var(--arch); background: var(--orange); }
-.hero__photo { position: relative; aspect-ratio: 4 / 5; border-radius: var(--arch); overflow: hidden; background: var(--sand); }
-.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+.hero__photo { position: relative; aspect-ratio: 5 / 6; border-radius: var(--arch); overflow: hidden; background: var(--sand); }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
 @media (min-width: 56rem) {
-  .hero__grid { grid-template-columns: 1.1fr 0.9fr; }
+  .hero__grid { grid-template-columns: 0.85fr 1.15fr; }
+  /* Big photo, but short enough to show in full on a laptop screen below the pinned header. */
+  .hero__photo { aspect-ratio: auto; height: min(78vh, 46rem); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero__photo { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
