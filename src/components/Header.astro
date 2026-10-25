@@ -1,33 +1,55 @@
 ---
 import { nav } from "../data/site";
+
+// build.format is "file", so pathnames can end in .html; compare against the clean URL.
+const path = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/") || "/";
+const isHere = (href) => href === path;
+const inSection = (item) => isHere(item.href) || (item.children || []).some((c) => isHere(c.href));
 ---
-<!-- Header -->
-<header id="header" class="alt">
-  <img style="float: left" src="/images/jhlogo.png" width="5%" height="100%" alt="" />
-  <h1 style="font-size: 1.5em; font-weight: bold; margin-left: 4rem">
-    <a href="/">Junior Hub</a>
-  </h1>
-  <nav id="nav">
-    <ul>
-      {
-        nav.map((item) => (
-          <li style="font-size: 1.2em; font-weight: bold">
-            <a
-              href={item.href}
-              class={item.button ? "button" : item.children ? "icon solid fa-angle-down" : undefined}
-            >
-              {item.label}
-            </a>
-            {item.children && (
-              <ul>
-                {item.children.map((child) => (
-                  <li><a href={child.href}>{child.label}</a></li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
+
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="brand" href="/">
+      <img src="/images/jhlogo.png" alt="" width="45" height="45" />
+      <span>Junior Hub</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        {
+          nav.map((item) => (
+            <li class="nav__item">
+              <a class="nav__link" href={item.href} aria-current={inSection(item) ? "page" : undefined}>{item.label}</a>
+              {item.children && (
+                <ul class="nav__sub">
+                  {item.children.map((child) => (
+                    <li>
+                      <a class="nav__link" href={child.href} aria-current={isHere(child.href) ? "page" : undefined}>{child.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+        <li class="nav__cta"><a class="btn" href="/contact">Book a tour</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.getElementById("site-nav");
+  if (toggle && menu) {
+    const setOpen = (open) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.textContent = open ? "Close" : "Menu";
+      menu.toggleAttribute("data-open", open);
+    };
+    toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+  }
+</script>

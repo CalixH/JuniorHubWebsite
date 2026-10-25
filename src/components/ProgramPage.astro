@@ -1,0 +1,47 @@
+---
+// Shared layout for the toddler, preschool and kindergarten pages.
+// Pass the facts as props; the body text goes in the slot.
+import Layout from "../layouts/Layout.astro";
+import PageHero from "./PageHero.astro";
+import { site } from "../data/site";
+
+const { title, seoTitle, description, ages, ratio, image } = Astro.props;
+---
+
+<Layout title={seoTitle} description={description}>
+  <PageHero title={title} back={{ href: "/program", label: "All programs" }} image={image}>
+    <dl class="facts">
+      <div>
+        <dt>{ages}</dt>
+        <dd>Ages</dd>
+      </div>
+      <div>
+        <dt>{ratio}</dt>
+        <dd>Educators to children</dd>
+      </div>
+    </dl>
+  </PageHero>
+
+  <div class="wrap page">
+    <div class="prose">
+      <slot />
+
+      <h2>Hours</h2>
+      <div class="cols">
+        {
+          site.programHours.map((h) => (
+            <div>
+              <h3>{h.label}</h3>
+              <p>{h.times.map((t) => (<span>{t}<br /></span>))}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="/contact">Book a tour</a>
+        <a class="btn btn--ghost" href="/register">Join the waitlist</a>
+      </div>
+    </div>
+  </div>
+</Layout>

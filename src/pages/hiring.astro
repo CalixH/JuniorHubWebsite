@@ -1,145 +1,135 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import { site } from "../data/site";
 ---
 
 <Layout title="Careers" description="Join the Junior Hub team. Current openings and how to apply.">
-    <section id="banner">
-      <h2>
-        <b><span style="color: white; font-size: 125">Careers</span></b>
-      </h2>
-    </section>
+  <PageHero
+    title="Careers"
+    lede="We are recruiting Registered Early Childhood Educators, early childhood assistants and Montessori teachers."
+    back={{ href: "/contactus", label: "Contact us" }}
+    image="/images/hall.jpg"
+  >
+    <div class="actions" style="margin-top: 1.5rem">
+      <a class="btn" href={`mailto:${site.email}`}>Email your résumé</a>
+    </div>
+  </PageHero>
 
-    <!-- Main -->
-    <section id="main" class="container">
-      <section class="box special">
-        <span class="image featured"
-          ><img src="/images/pic01.jpeg" alt=""
-        /></span>
-        <p>
-          Junior Hub Child Care and Learning Centre is located in the
-          neighborhood of Hwy 7, 407 and Yonge Street, providing full-time
-          care for children from 18mons to 6 years of age. We offer rewarding
-          careers for dynamic professionals who are committed to life-long
-          learning. We are currently recruiting highly motivated and
-          responsible individuals to join our team.
-        </p>
-        <h3 style="font-weight: bold; text-align: center">
-          Registered Early Childhood Educator (RECE)
-        </h3>
-        <p>
-          Reporting to: Supervisor
-          <br />
-          <br />
-          Successful candidates will have:
-        </p>
-        <ul style="text-align: left">
-          <li>
-            Registration in good standing with the College of Early Childhood
-            Educators
-          </li>
-          <li>
-            Working knowledge of Child Care and Early Years Act, ELECT, and
-            HDLH
-          </li>
-          <li>
-            Strong ability to plan, implement and document developmentally
-            appropriate and bias-free activities with understanding of ELECT
-            and How Does Learning Happen?; to engage with children to support
-            their development in all areas; to organize an inspirational
-            learning environment.
-          </li>
-          <li>
-            Proven ability to communicate in a professional manner with
-            children, parents/guardians, and staff
-          </li>
-          <li>
-            Excellent work ethics (be punctual, flexible, reliable) and
-            commitment to quality care
-          </li>
-          <li>
-            Current standard First Aid and CPR, clear Police Records Check
-            with Vulnerable Sector Check dated within 6 months of hire date,
-            Up-to-date health assessment including TB test.
-          </li>
-        </ul>
+  <div class="wrap page">
+    <div class="prose">
 
-        <h3 style="font-weight: bold; text-align: center">
-          Early Childhood Assistants (ECA)
-        </h3>
-        <p>Successful candidates will have:</p>
-        <ul style="text-align: left">
-          <li>
-            Minimum of six months’ experience working with children in a day
-            care or before and after school program
-          </li>
-          <li>An ECA Diploma as an asset</li>
-          <li>
-            Ability to engage with children to support their development in
-            all areas; to maintain and clean an inspirational learning
-            environment
-          </li>
+      <p>
+      Junior Hub Child Care and Learning Centre is located in the
+      neighborhood of Hwy 7, 407 and Yonge Street, providing full-time
+      care for children from 18mons to 6 years of age. We offer rewarding
+      careers for dynamic professionals who are committed to life-long
+      learning. We are currently recruiting highly motivated and
+      responsible individuals to join our team.
+      </p>
+      <h2>Registered Early Childhood Educator (RECE)</h2>
+      <p>
+      Reporting to: Supervisor</p>
+      <p>Successful candidates will have:
+      </p>
+      <ul>
+      <li>
+      Registration in good standing with the College of Early Childhood
+      Educators
+      </li>
+      <li>
+      Working knowledge of Child Care and Early Years Act, ELECT, and
+      HDLH
+      </li>
+      <li>
+      Strong ability to plan, implement and document developmentally
+      appropriate and bias-free activities with understanding of ELECT
+      and How Does Learning Happen?; to engage with children to support
+      their development in all areas; to organize an inspirational
+      learning environment.
+      </li>
+      <li>
+      Proven ability to communicate in a professional manner with
+      children, parents/guardians, and staff
+      </li>
+      <li>
+      Excellent work ethics (be punctual, flexible, reliable) and
+      commitment to quality care
+      </li>
+      <li>
+      Current standard First Aid and CPR, clear Police Records Check
+      with Vulnerable Sector Check dated within 6 months of hire date,
+      Up-to-date health assessment including TB test.
+      </li>
+      </ul>
+      <h2>Early Childhood Assistants (ECA)</h2>
+      <p>Successful candidates will have:</p>
+      <ul>
+      <li>
+      Minimum of six months’ experience working with children in a day
+      care or before and after school program
+      </li>
+      <li>An ECA Diploma as an asset</li>
+      <li>
+      Ability to engage with children to support their development in
+      all areas; to maintain and clean an inspirational learning
+      environment
+      </li>
+      <li>
+      Proven ability to communicate in a professional manner with
+      children, parents/guardians, and staff
+      </li>
+      <li>
+      Excellent work ethics (be punctual, flexible, reliable) and
+      commitment to quality care
+      </li>
+      <li>
+      Current standard First Aid and CPR, clear Police Records Check
+      with Vulnerable Sector Check dated within 6 months of hire date,
+      Up-to-date health assessment including TB test.
+      </li>
+      </ul>
+      <h2>Montessori Teacher</h2>
+      <p>
+      Reporting to: Supervisor</p>
+      <p>Successful candidates will have:
+      </p>
+      <ul>
+      <li>
+      Diploma in Montessori Training from an accredited Montessori
+      Training Institute
+      </li>
+      <li>
+      At least one year of on-job experience working in a Montessori
+      environment
+      </li>
+      <li>
+      Experience to observe, guide and assess children while they learn
+      in the classroom environment; to plan and implement Montessori
+      learning activities to children; to engage with children to
+      support their development in all areas
+      </li>
+      <li>
+      Proven ability to communicate in a professional manner with
+      children, parents/guardians, and staff
+      </li>
+      <li>
+      Excellent work ethics (be punctual, flexible, reliable) and
+      commitment to quality care
+      </li>
+      <li>
+      Current standard First Aid and CPR, clear Police Records Check
+      with Vulnerable Sector Check dated within 6 months of hire date,
+      Up-to-date health assessment including TB test.
+      </li>
+      </ul>
+      <p>
+      Please email your résumé to
+      <a href="mailto:info@juniorhub.ca">info@juniorhub.ca</a> with the
+      email header of the role and your name. Thank you for your interest.
+      Only applicants selected for an interview will be contacted.
+      </p>
 
-          <li>
-            Proven ability to communicate in a professional manner with
-            children, parents/guardians, and staff
-          </li>
-          <li>
-            Excellent work ethics (be punctual, flexible, reliable) and
-            commitment to quality care
-          </li>
-          <li>
-            Current standard First Aid and CPR, clear Police Records Check
-            with Vulnerable Sector Check dated within 6 months of hire date,
-            Up-to-date health assessment including TB test.
-          </li>
-        </ul>
-
-        <h3 style="font-weight: bold; text-align: center">
-          Montessori Teacher
-        </h3>
-        <p>
-          Reporting to: Supervisor
-          <br />
-          <br />
-          Successful candidates will have:
-        </p>
-        <ul style="text-align: left">
-          <li>
-            Diploma in Montessori Training from an accredited Montessori
-            Training Institute
-          </li>
-          <li>
-            At least one year of on-job experience working in a Montessori
-            environment
-          </li>
-          <li>
-            Experience to observe, guide and assess children while they learn
-            in the classroom environment; to plan and implement Montessori
-            learning activities to children; to engage with children to
-            support their development in all areas
-          </li>
-
-          <li>
-            Proven ability to communicate in a professional manner with
-            children, parents/guardians, and staff
-          </li>
-          <li>
-            Excellent work ethics (be punctual, flexible, reliable) and
-            commitment to quality care
-          </li>
-          <li>
-            Current standard First Aid and CPR, clear Police Records Check
-            with Vulnerable Sector Check dated within 6 months of hire date,
-            Up-to-date health assessment including TB test.
-          </li>
-        </ul>
-
-        <p>
-          Please email your résumé to
-          <a href="mailto:info@juniorhub.ca">info@juniorhub.ca</a> with the
-          email header of the role and your name. Thank you for your interest.
-          Only applicants selected for an interview will be contacted.
-        </p>
-      </section>
-    </section>
+    </div>
+  </div>
 </Layout>

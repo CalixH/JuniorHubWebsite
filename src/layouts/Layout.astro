@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -9,9 +10,10 @@ interface Props {
 }
 
 const defaultDescription =
-  "Junior Hub is a licensed child care and learning centre offering toddler, preschool, kindergarten and summer camp programs.";
+  "Junior Hub is a licensed child care and learning centre near Hwy 7, 407 and Yonge Street, with toddler, preschool, kindergarten and summer camp programs.";
 const { title, description = defaultDescription, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} | Junior Hub` : "Junior Hub | Child Care & Learning Centre";
+
 // build.format is "file", so pathnames can end in .html; publish the clean URL.
 const cleanPath = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/") || "/";
 const canonical = new URL(cleanPath, Astro.site).toString();
@@ -22,26 +24,28 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
-<!--
-  Alpha by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex" />}
+    {noindex && (<meta name="robots" content="noindex" />)}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/images/jhlogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#14412f" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL("/images/jhlogo.png", Astro.site).toString()} />
-    <link rel="stylesheet" href="/assets/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap"
+    />
+    <script is:inline>document.documentElement.classList.add("js");</script>
     {
       gaId && (
         <>
@@ -58,21 +62,12 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
       )
     }
   </head>
-  <body class="landing is-preload">
-    <button onclick="topFunction()" id="myBtn" title="Go to top">☝️</button>
-    <div id="page-wrapper">
-      <Header />
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header />
+    <main id="main">
       <slot />
-      <Footer />
-    </div>
-
-    <!-- Scripts -->
-    <script is:inline src="/assets/js/jquery.min.js"></script>
-    <script is:inline src="/assets/js/jquery.dropotron.min.js"></script>
-    <script is:inline src="/assets/js/jquery.scrollex.min.js"></script>
-    <script is:inline src="/assets/js/browser.min.js"></script>
-    <script is:inline src="/assets/js/breakpoints.min.js"></script>
-    <script is:inline src="/assets/js/util.js"></script>
-    <script is:inline src="/assets/js/main.js"></script>
+    </main>
+    <Footer />
   </body>
 </html>
