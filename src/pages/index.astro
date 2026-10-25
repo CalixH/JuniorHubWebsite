@@ -1,124 +1,223 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { site } from "../data/site";
 ---
 
-<Layout description="Junior Hub is a licensed child care and learning centre near Hwy 7, 407 and Yonge Street offering toddler, preschool, kindergarten and summer camp programs. CWELCC enrolled; fee subsidy available.">
-    <!-- Banner -->
-    <section id="banner">
-      <p id="popup">
-        Enroll in Canada-Wide Early Learning and Childcare System/Childcare! <br />
-        Fee subsidy is available
+<Layout
+  description="Junior Hub is a licensed child care and learning centre near Hwy 7, 407 and Yonge Street, with toddler, preschool, kindergarten and summer camp programs. Fee subsidy is available."
+>
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>Child care and early learning for ages 18 months to 6</h1>
+        <p class="hero__lede">
+          Play-based days led by Registered Early Childhood Educators, with a hot lunch and two snacks every day.
+        </p>
+        <div class="actions">
+          <a class="btn" href="/contact">Book a tour</a>
+          <a class="btn btn--ghost" href="/register">Join the waitlist</a>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Ages 18 months to 6 years</dt>
+            <dd>Toddler, preschool and kindergarten</dd>
+          </div>
+          <div>
+            <dt>Monday to Friday</dt>
+            <dd>7:30am to 6:00pm</dd>
+          </div>
+          <div>
+            <dt>{site.address.street}</dt>
+            <dd>{site.address.area}</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero__art">
+        <div class="hero__photo">
+          <img
+            src="/images/t4.jpg"
+            alt="A bright classroom with sand-coloured arches painted on the wall, child-sized tables and orange chairs"
+            width="1800"
+            height="1194"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice" aria-label="Availability and fees">
+    <div class="wrap notice__inner">
+      <strong>{site.availability.title}</strong>
+      <p>{site.availability.text}</p>
+      <p class="small">
+        {site.cwelcc.text}
+        <a href={site.cwelcc.url}>York Region fee information</a>
       </p>
-      <h2>
-        <b
-          ><span
-            style="
-              font-family: 'Times New Roman', Times, serif;
-              font-size: 2.6em;
-              line-height: 80%;
-              color: #ff8000;
-              text-shadow: 0px 0px 2px #000;
-            "
-            >Junior Hub</span
-          ></b
-        >
-      </h2>
-      <p style="font-size: 2.3em">Child Care & Learning Centre</p>
-      <ul class="actions special">
-        <li style="font-size: 1.5em">
-          <a href="/contact" class="button">Book A Tour</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head">
+        <h2>Rooms for every age</h2>
+        <p>
+          Full-time care runs 7:30am to 6:00pm. Part-time mornings (9:00am to 12:00pm) and afternoons (1:30pm to 4:30pm)
+          are available too.
+        </p>
+      </div>
+      <div class="rooms">
+        <article class="room">
+          <div class="room__photo">
+            <img src="/images/t3.jpg" alt="A toddler play table with a road and toy vehicles" loading="lazy" width="1707" height="1280" />
+          </div>
+          <h3>Toddler</h3>
+          <p class="room__meta">18 months to 2.5 years<br />1 staff : 5 children</p>
+          <p>Hands-on exploration, sensory play, music and movement, with educators who listen, observe and join in.</p>
+          <a class="room__more" href="/toddler">See the toddler room</a>
+        </article>
+        <article class="room">
+          <div class="room__photo">
+            <img src="/images/p2.JPG" alt="A preschool room with a play mat, wooden train track and child-sized tables" loading="lazy" width="1800" height="1258" />
+          </div>
+          <h3>Preschool</h3>
+          <p class="room__meta">2.5 to 4 years<br />1 staff : 8 children</p>
+          <p>Art, loose parts, sensory play, cooking and dramatic play build early language, literacy, numeracy and science skills.</p>
+          <a class="room__more" href="/preschool">See the preschool room</a>
+        </article>
+        <article class="room">
+          <div class="room__photo">
+            <img src="/images/k1.jpg" alt="Kindergarten tables set with trays of colourful pattern blocks" loading="lazy" width="1800" height="1248" />
+          </div>
+          <h3>Kindergarten</h3>
+          <p class="room__meta">4 to 6 years<br />1 staff : 13 children</p>
+          <p>Montessori curriculum from September to June, enriched with French, Chinese and music.</p>
+          <a class="room__more" href="/kindergarten">See the kindergarten room</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap split">
+      <div>
+        <h2>How learning happens here</h2>
+        <p style="margin-top: 1rem">
+          Our educators watch and document what each child is curious about, then plan play around it. We follow Ontario's
+          <em>How Does Learning Happen?</em> framework, built on four ideas.
+        </p>
+        <p class="source"><a href="/about">Read about our approach</a></p>
+      </div>
+      <dl class="areas">
+        <div>
+          <dt>Belonging</dt>
+          <dd>Every child feels connected to others and contributes to the world around them.</dd>
+        </div>
+        <div>
+          <dt>Well-being</dt>
+          <dd>Children build a sense of self, health and well-being, with help from Montessori resources.</dd>
+        </div>
+        <div>
+          <dt>Engagement</dt>
+          <dd>Children explore the world with their bodies, minds and senses.</dd>
+        </div>
+        <div>
+          <dt>Expression</dt>
+          <dd>Children learn to express themselves in many ways, in a caring and loving environment.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--leaf">
+    <div class="wrap split split--even">
+      <div>
+        <p class="big-line">A hot lunch and two snacks, every day.</p>
+        <p class="actions" style="margin-top: 1.75rem"><a class="btn btn--ghost" href="/nutrition">See nutrition and menu</a></p>
+      </div>
+      <ul class="list">
+        <li>
+          <strong>Peanut-free kitchen</strong>
+          Peanuts and peanut products are not used in any food preparation at the centre.
+        </li>
+        <li>
+          <strong>Weekly menus</strong>
+          Posted on the family information board, with any alternatives noted.
+        </li>
+        <li>
+          <strong>Daily updates</strong>
+          Educators share your child's day through the HiMama app, by email, text or notification.
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <!-- Main -->
-    <section id="main" class="container">
-      <section class="box special">
-        <h4>
-          <span style="font-weight: bold; font-size: 115%; color: #180658"
-            ><span style="color: black; font-size: 125%; font-weight: bolder"
-              >Toddler,Preschool, JK & SK</span
-            >
-            space available! <br />
-            <span style="color: red"
-              >PA Days, March Break, Summer Camp space available!</span
-            > <br />
-            Proudly enrolled in the Canada-Wide Early Learning & Child Care (CWELCC) System
-            <br />
-            <br />
-            Toddler <br />
-            (1.5yrs-2.5yrs) <br />
-            Preschool <br />
-            (2.5yrs-4yrs) <br />
-            Kindergarten <br />
-            (4yrs-6yrs before June 30th) <br />
-            <br /><span style="color: red"
-              >Refund includes PA Days, March Break, and Summer Camp</span
-            ><br />
-            <br />
-            For more details of CWELCC, please visit
-            <a
-              href="https://www.york.ca/support/childrens-services/child-care-information-parents"
-              target="_blank"
-              rel="noreferrer noopener"
-              >this link</a
-            > </span
-          > 
-        </h4>
+  <section class="section">
+    <div class="wrap split split--even">
+      <div class="arch-photo">
+        <img src="/images/c2.JPG" alt="Two children in sun hats drawing with chalk on the playground" loading="lazy" width="1706" height="1279" />
+      </div>
+      <div>
+        <h2>Summer camp for ages 4 to 6</h2>
+        <p style="margin-top: 1rem">
+          July to September, with indoor and outdoor games and hands-on science, technology, engineering, art and math
+          activities led by our educators. Registration is for a minimum of two weeks.
+        </p>
+        <div class="actions" style="margin-top: 1.75rem">
+          <a class="btn" href="/summercampregister">Register for camp</a>
+          <a class="btn btn--ghost" href="/summercamp">Camp details and fees</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <hr />
+  <section class="section section--sand">
+    <div class="wrap visit-grid">
+      <div>
+        <h2>Visit Junior Hub</h2>
+        <p style="margin-top: 1rem">Look for the orange sign. We would love to show you the rooms and answer your questions.</p>
+        <address class="address">
+          <a href={site.address.mapUrl}>{site.address.street}</a><br />
+          <a href={`tel:${site.phone}`}>{site.phone}</a><br />
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </address>
+        <table class="hours">
+          <tbody>
+            {site.hours.map((h) => (<tr><th scope="row">{h.days}</th><td>{h.time}</td></tr>))}
+          </tbody>
+        </table>
+        <div class="actions" style="margin-top: 1.75rem">
+          <a class="btn" href="/contact">Book a tour</a>
+          <a class="btn btn--ghost" href="/register">Join the waitlist</a>
+        </div>
+      </div>
+      <figure class="frame" style="margin: 0">
+        <img
+          src="/images/d11.JPG"
+          alt="The Junior Hub storefront on Yonge Street, with a white gable sign and an orange banner listing our programs"
+          loading="lazy"
+          width="1788"
+          height="1282"
+        />
+        <figcaption>Our entrance at {site.address.street}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>From our Instagram</h2>
+      <div class="feed">
         <script is:inline src="https://apps.elfsight.com/p/platform.js" defer></script>
         <div class="elfsight-app-42d87d06-8681-46b0-bd00-befa29c45b50"></div>
-
-        <hr />
-
-        <h3>We are hiring new staff members!</h3>
-        <div class="col-12-mobilep">
-          <ul class="actions special">
-            <li>
-              <a href="/hiring" class="button">Hiring information</a>
-            </li>
-          </ul>
-        </div>
-        <hr />
-        <h2>
-          Every child is a different kind of flower. All together, <br />
-          we make this world a beautiful garden. <br />
-        </h2>
-        <p
-          style="
-            font-size: 1.3em;
-            color: rgb(97, 96, 96);
-            text-align: right;
-            padding-right: 40px;
-          "
-        >
-          <i>~ Brigette Barrager</i>
-        </p>
-      </section>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta">
-      <h2>Contact Us!</h2>
-      <p>Click the buttons below to learn more about us!</p>
-
-      <div class="col-12-mobilep">
-        <ul class="actions special">
-          <li><a href="/about" class="button">About Us</a></li>
-          <li>
-            <a href="/contactus" class="button">Contact information</a>
-          </li>
-          <li><a href="/contact" class="button">Book a tour</a></li>
-          <li>
-            <a href="/register" class="button">Join the waitlist</a>
-          </li>
-          <li>
-            <a href="/summercampregister" class="button"
-              >Summer camp registration</a
-            >
-          </li>
-        </ul>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <figure class="wrap quote">
+    <blockquote style="margin: 0">
+      <p>Every child is a different kind of flower. All together, we make this world a beautiful garden.</p>
+    </blockquote>
+    <figcaption style="margin-top: 1rem" class="muted">Brigette Barrager</figcaption>
+  </figure>
 </Layout>

@@ -1,50 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import ProgramPage from "../components/ProgramPage.astro";
 ---
 
-<Layout title="Kindergarten Program" description="Our kindergarten program for children aged 4 to 6 years at Junior Hub.">
-    <section id="banner">
-      <h2>
-        <b><span style="color: white; font-size: 125">Kindergarten</span></b>
-      </h2>
-      <p>
-        5 Years to 6 Years <br />
-        1 Staff : 13 Children
-      </p>
-    </section>
-
-    <!-- Main -->
-    <section id="main" class="container">
-      <section class="box special">
-        <p>
-          Our kindergarten program reflects the belief that four to six years
-          old are capable and adept learners, full of potential, and equipped
-          to take ownership of their learning. Our educators approach children
-          as unique learners who live and learn within their families and
-          communities. Montessori Curriculum ( September - June) <br />
-          Summer Camp ( July and August) <br />
-          French, Chinese, and Music enriched program <br />
-
-          March Break <br />
-          Winter Break <br />
-          PA days
-        </p>
-        <div class="row">
-          <div class="row-6 row-12-mobilep">
-            <h3>Full-time</h3>
-            <p>7:30am - 6:00pm</p>
-          </div>
-          <div class="row-6 row-12-mobilep">
-            <h3>Part-time</h3>
-            <p>
-              9:00am - 12:00pm <br />
-              1:30pm - 4:30pm
-            </p>
-          </div>
-          <span class="image featured"
-            ><img src="/images/kindergarten.jpg" alt="image"
-          /></span>
-        </div>
-      </section>
-    </section>
-</Layout>
+<ProgramPage
+  title="Kindergarten"
+  seoTitle="Kindergarten Program"
+  description="Our kindergarten program for children aged 4 to 6 years at Junior Hub."
+  ages="4 to 6 years"
+  ratio="1 : 13"
+  image="/images/k1.jpg"
+>
+  <p>
+    Our kindergarten program reflects the belief that four to six year olds are capable and adept learners, full of
+    potential, and equipped to take ownership of their learning. Our educators approach children as unique learners
+    who live and learn within their families and communities.
+  </p>
+  <h2>What the program includes</h2>
+  <ul>
+    <li>Montessori curriculum, September to June</li>
+    <li>Summer camp, July and August</li>
+    <li>French, Chinese and music enrichment</li>
+    <li>March break, winter break and PA days</li>
+  </ul>
+</ProgramPage>

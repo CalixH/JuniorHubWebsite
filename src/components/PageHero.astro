@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  lede?: string;
+  back?: { href: string; label: string };
+  image?: string;
+}
+const { title, lede, back, image } = Astro.props;
+---
+
+<section class="pagehero">
+  <div class={image ? "wrap pagehero__grid pagehero__grid--art" : "wrap pagehero__grid"}>
+    <div>
+      {back && (<p class="crumb"><a href={back.href}>{back.label}</a></p>)}
+      <h1>{title}</h1>
+      {lede && (<p class="pagehero__lede">{lede}</p>)}
+      <slot />
+    </div>
+    {image && (<div class="arch-photo"><img src={image} alt="" /></div>)}
+  </div>
+</section>

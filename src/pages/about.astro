@@ -1,327 +1,186 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import { site } from "../data/site";
 ---
 
-<Layout title="About Us" description="Learn about Junior Hub Child Care Centre, our play-based approach and our team of dedicated educators.">
-    <section id="banner">
-      <h2>
-        <b><span style="color: white; font-size: 125">About Us</span></b>
-      </h2>
-    </section>
+<Layout
+  title="About Us"
+  description="Learn about Junior Hub Child Care Centre, our play-based approach and our team of dedicated educators."
+>
+  <PageHero
+    title="About us"
+    lede="A licensed child care centre near Hwy 7, 407 and Yonge Street, with play-based learning led by Registered Early Childhood Educators."
+    image="/images/p1.JPG"
+  />
 
-    <!-- Main -->
-    <section id="main" class="container">
-      <section class="box special">
-        <p>
-          Welcome to Junior Hub Child Care Centre, your licensed childcare
-          facility nestled in the vibrant neighborhood at the intersection of
-          Hwy 7, 407, and Yonge Street. Our dedicated team comprises of
-          compassionate and nurturing educators coimmitted to creating a
-          secure, play-based atmosphere. We prioritize fostering the holistic
-          development of children by providing a cheerful and convenient
-          setting that promotes their physical, social, emotional, and
-          cognitive growth.
-          <br />
-          <br />
-
-          We strive to create
-        </p>
-        <ol class="big" style="text-align: left">
-          <li>
-            <span>A Nurturing Environment</span>
-            <p>
-              To feel secure, safe, and happy in an atmosphere created
-              especially to help children develop to their full potential.
-
-              <br />
-              To participate in a well-balanced program that encourages
-              children to explore their natural environment.
-              <br />
-
-              To develop skills that encourage communication, self-regulation
-              and Exploration.
-            </p>
-          </li>
-        </ol>
-
-        <p>
-          We are located at
-          <a href="https://goo.gl/maps/dk6YSeDGr4xfXEz46"
-            >8100 Yonge St. Unit #8-9</a
-          >, and are open Monday through Friday, 7:30am to 6:00pm. We offer
-          Toddler, Preschool, Kindergarten, PA day, March Break, and Summer
-          Camp programs.
-        </p>
-
-        <span class="image featured"
-          ><img src="/images/pic01.jpeg" alt=""
-        /></span>
-        <p>
-          Our programs use observation and documentation to plan play-based
-          learning experiences that encourage active exploration, inquiry,
-          independence, choices, problem solving, wonder and theory building.
-          Regular communications between families and educators are emphasised
-          in our programs. Using the common framework in
-          <i>How Does Learning Happen?</i> Ontario’s Pedagogy for the Early
-          Years (2014), our Centre supports the children to achieve their
-          goals in the following four developmental areas:
-        </p>
-      </section>
-
-      <section class="box special features">
-        <div class="features-row">
-          <section>
-            <span class="icon solid major fa-baby accent2"></span>
-            <h3
-              style="
-                font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
-                color: #e89980;
-              "
-            >
-              Belonging
-            </h3>
-            <p>
-              Every child has a sense of belonging when he/she is connected to
-              others and contributes to his/her world.
-              <br />
-              <br />
-              Our program expectation early childhood programs cultivate
-              authentic, caring relationships and connections to create a
-              sense of belonging among and between children, adults, and the
-              workd around them. (P24, HDLH)
-            </p>
-          </section>
-          <section>
-            <span class="icon solid major fa-heartbeat accent3"></span>
-            <h3
-              style="
-                font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
-                color: #7fcdb8;
-              "
-            >
-              Well-Being
-            </h3>
-            <p>
-              Every child is developing a sense of self and health and
-              well-being.
-              <br />
-              <br />
-              Our program support children’s sense of self awareness, with the
-              help of Montessori resources.
-            </p>
-          </section>
-        </div>
-        <div class="features-row">
-          <section>
-            <span class="icon solid major fa-comments accent4"></span>
-            <h3
-              style="
-                font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
-                color: #90b0ba;
-              "
-            >
-              Engagement
-            </h3>
-            <p>
-              Every child is an active and engaged learner who explores the
-              world with body, mind and senses.
-              <br />
-              <br />
-              Our program provide environments and experiences to engage
-              children in active, creative, and meaningful exploration, play,
-              and inquiry. (P35, HDLH)
-            </p>
-          </section>
-          <section>
-            <span class="icon solid major fa-laugh-beam accent5"></span>
-            <h3
-              style="
-                font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
-                color: #e5cb95;
-              "
-            >
-              Expression
-            </h3>
-            <p>
-              Every child is a capable communicator who is able to express
-              himself/herself in many ways.
-              <br />
-              <br />
-              Our program foster communication and expression in a friendly,
-              caring, safe and loving environment. (P41, HDLH)
-            </p>
-          </section>
-        </div>
-        <br />
-        <p>
-          Reference (2014), How Does Learning Happen? Ontario's Pedagogy for
-          the Early Years
-        </p>
-      </section>
-    </section>
-
-    <section class="box special">
-      <span class="image featured"
-        ><img src="/images/pic01.jpeg" alt=""
-      /></span>
-      <h3 style="font-weight: bold; text-align: center">Our Educators</h3>
+  <div class="wrap page">
+    <div class="prose">
       <p>
-        Our committed Registered Early Childhood Educators (RECE) are all
-        registered through the College of Early Childhood Educators, and are
-        trained in First Aid and CPR. Educators are carefully selected and
-        screened to meet the needs of Jr. Hub, children and their families.
-        Our RECE’s participate in continuous professional learning, which
-        helps them remain current in their knowledge, skills, and professional
-        values. They reflect on their practice, and identify ways in which
-        they can grow professionally.
-        <br />
-        <br />
-        Our educators view children as:
+        Welcome to Junior Hub Child Care Centre, your licensed childcare facility nestled in the vibrant neighborhood at
+        the intersection of Hwy 7, 407, and Yonge Street. Our dedicated team comprises compassionate and nurturing
+        educators committed to creating a secure, play-based atmosphere. We prioritize fostering the holistic
+        development of children by providing a cheerful and convenient setting that promotes their physical, social,
+        emotional, and cognitive growth.
       </p>
-      <ul style="list-style-image: url(/images/star.png); text-align: left">
-        <li>Competent, curious, and motivated learners.</li>
-        <li>
-          Individuals who bring valuable knowledge, ideas, and experiences
-          about their physical and social world to the classroom.
-        </li>
-        <li>
-          Individuals who begin to make sense of their world from the moment
-          they are born.
-        </li>
-        <li>Active learners and social learners.</li>
-        <li>
-          Individuals who come to our programs are influenced by family,
-          gender, culture, and previous experience.
-        </li>
-        <li>
-          Individuals with a variety of learning styles and ways of
-          understanding and constructing knowledge.
-        </li>
+
+      <h2>A nurturing environment</h2>
+      <p>We strive to create an environment where children get to:</p>
+      <ul>
+        <li>Feel secure, safe, and happy in an atmosphere created especially to help them develop to their full potential.</li>
+        <li>Participate in a well-balanced program that encourages them to explore their natural environment.</li>
+        <li>Develop skills that encourage communication, self-regulation and exploration.</li>
       </ul>
-      <p style="font-size: smaller">
-        <i
-          >Volunteers and Students do not have unsupervised access to the
-          children in attendance at Jr. Hub, nor can they be counted in the
-          staffing ratio. No child will be supervised by a person less than 18
-          years of age.</i
-        >
-      </p>
-
-      <h3 style="font-weight: bold; text-align: center">Our Goals</h3>
       <p>
-        The early years are critical to your child’s positive growth and
-        development and they are eager to learn new skills, experience
-        challenging opportunities, and be encouraged for their strengths and
-        talents.We strive to promote optimal development in all aspects of a
-        child’s life. Our primary goal is promoting each child to develop a
-        healthy self-concept, confidence, curiosity, and motivation to learn,
-        and also the ability to establish cooperative relationships with other
-        children and adults for lifelong basis. We strive to ensure that every
-        child receives creative and fun learning experiences that support the
-        development of recognition, social, emotional and physical. Our
-        activities and programs are all formulated to engage your child’s
-        natural curiosity and provide a foundation for lifelong success.
-        Preparing your child to succeed in school and in life is the core of
-        our childcare curriculum inline with Ontario’s Pedagogy for the Early
-        Year: <i>How Does Learning Happen?</i> And
-        <i>Early Learning For Every Child Today</i>.
+        We are located at <a href={site.address.mapUrl}>{site.address.street}</a>, and are open Monday through Friday,
+        7:30am to 6:00pm. We offer toddler, preschool, kindergarten, PA day, March break, and summer camp programs.
       </p>
-      <br />
-      <br />
-      <h3 style="font-weight: bold; text-align: center">Philosophy</h3>
 
+      <figure>
+        <img
+          src="/images/pic01.jpeg"
+          alt="A child's hands placing soft foam number and shape tiles on a wooden floor"
+          width="1600"
+          height="500"
+          loading="lazy"
+        />
+      </figure>
+
+      <h2>How children learn here</h2>
       <p>
-        We believe that every child is unique and possesses his/her own
-        temperament and learning style.
-        <br />
-        <br />
-        We believe that children are competent, capable of complex thinking,
-        curious and rich in potential. We are committed to the “emergent
-        curriculum” approach to program planning, in which activities “emerge”
-        based on ideas and interests from both children and staff. This
-        spontaneous learning process prepares them for acquiring more complex
-        skills of reading, writing and mathematical reasoning.
-
-        <br />
-        <br />
-        We believe play is integral to children’s learning and essential to
-        quality of life in childhood. Exploration and play are a child’s
-        primary way of understanding the world. Children are agents of their
-        own learning, actively building knowledge, skills, dispositions, and
-        feelings. We are committed to fostering each child’s self-esteem,
-        well-being and growing need for independence. All aspects of their
-        development and learning are interrelated and interdependent.
-
-        <br />
-        <br />
-        At JHCCLC, our youngest learners are supported in the development of
-        positive and effective communication. Early on, children experience
-        meaningful opportunities and individual support related to expression
-        and self-regulation. Rich in potential and ability, children develop
-        understanding and competence in emotional expression, emotional
-        intelligence and self-awareness. Expression is supported through
-        observation, documentation, listening, and authentic communication.
-        Child-initiated positive communication creates a pathway to
-        self-regulation and problem solving. Through positive, self-directed
-        problem-solving and respectful discussion, the children form
-        relationships and practice behaviours that are foundational to
-        effective lifelong communication and assist in creating a sense of
-        belonging.
-
-        <br />
-        <br />
-        We Use How Does Learning Happen? Ontario's Pedagogy for the Early
-        Years (2014) to guide our programing and pedagogy. We provide a
-        positive framework to support our children and families in an
-        environment that promotes belonging, well-being, engagement, and
-        expression.
+        Our programs use observation and documentation to plan play-based learning experiences that encourage active
+        exploration, inquiry, independence, choices, problem solving, wonder and theory building. Regular
+        communication between families and educators is emphasized in our programs. Using the common framework in
+        <i>How Does Learning Happen?</i> Ontario's Pedagogy for the Early Years (2014), our centre supports children to
+        achieve their goals in four developmental areas.
       </p>
-      <div class="row">
-        <div class="row-6 row-12-mobilep">
-          <h3
-            style="text-align: left; padding-left: 400px; font-weight: bold"
-          >
-            We always:
-          </h3>
-          <ul style="text-align: left" class="check-list">
-            <li>
-              Commit to helping children develop independence, confidence and
-              skills for the future.
-            </li>
-            <li>Recognise the uniqueness of each child.</li>
-            <li>
-              Keep children healthy and safe through shared and high quality
-              practice.
-            </li>
-            <li>
-              Become the catalyst for children making progress and achieving
-              at their own pace.
-            </li>
-            <li>Promote equality and diversity.</li>
-            <li>Make confidence an on-going priority.</li>
-            <li>
-              Ensure that parents and families are involved, encouraged and
-              consulted.
-            </li>
-            <li>Make sure planning and self-evaluation is effective.</li>
-            <li>
-              Establish an ambitious vision that everyone shares and
-              understands.
-            </li>
-            <li>
-              Promote well qualified staff where professional development.
-            </li>
-            <li>
-              Establish meaningful and supportive activities – allow children
-              to make choices.
-            </li>
-            <li>Give children the time to think and speak.</li>
-            <li>Allow children to do things at their own pace.</li>
-            <li>Give children the skills and confidence to take the lead.</li>
-            <li>Always plan for improvement.</li>
-          </ul>
+
+      <div class="cols">
+        <div>
+          <h3>Belonging</h3>
+          <p>
+            Every child has a sense of belonging when they are connected to others and contribute to their world. Our
+            program cultivates authentic, caring relationships and connections that create a sense of belonging among
+            and between children, adults, and the world around them. (P24, HDLH)
+          </p>
         </div>
-        <div class="row-6 row-12-mobilep"></div>
+        <div>
+          <h3>Well-being</h3>
+          <p>
+            Every child is developing a sense of self and health and well-being. Our program supports children's sense
+            of self-awareness, with the help of Montessori resources.
+          </p>
+        </div>
+        <div>
+          <h3>Engagement</h3>
+          <p>
+            Every child is an active and engaged learner who explores the world with body, mind and senses. Our program
+            provides environments and experiences that engage children in active, creative, and meaningful exploration,
+            play, and inquiry. (P35, HDLH)
+          </p>
+        </div>
+        <div>
+          <h3>Expression</h3>
+          <p>
+            Every child is a capable communicator who is able to express themselves in many ways. Our program fosters
+            communication and expression in a friendly, caring, safe and loving environment. (P41, HDLH)
+          </p>
+        </div>
       </div>
-    </section>
+      <p class="hint">Reference: How Does Learning Happen? Ontario's Pedagogy for the Early Years (2014).</p>
+
+      <h2>Our educators</h2>
+      <p>
+        Our committed Registered Early Childhood Educators (RECE) are all registered through the College of Early
+        Childhood Educators, and are trained in First Aid and CPR. Educators are carefully selected and screened to meet
+        the needs of Jr. Hub, children and their families. Our RECEs participate in continuous professional learning,
+        which helps them remain current in their knowledge, skills, and professional values. They reflect on their
+        practice, and identify ways in which they can grow professionally.
+      </p>
+      <p>Our educators view children as:</p>
+      <ul>
+        <li>Competent, curious, and motivated learners.</li>
+        <li>Individuals who bring valuable knowledge, ideas, and experiences about their physical and social world to the classroom.</li>
+        <li>Individuals who begin to make sense of their world from the moment they are born.</li>
+        <li>Active learners and social learners.</li>
+        <li>Individuals who come to our programs influenced by family, gender, culture, and previous experience.</li>
+        <li>Individuals with a variety of learning styles and ways of understanding and constructing knowledge.</li>
+      </ul>
+      <p class="hint">
+        Volunteers and students do not have unsupervised access to the children in attendance at Jr. Hub, nor can they
+        be counted in the staffing ratio. No child will be supervised by a person less than 18 years of age.
+      </p>
+
+      <h2>Our goals</h2>
+      <p>
+        The early years are critical to your child's positive growth and development, and children are eager to learn
+        new skills, experience challenging opportunities, and be encouraged for their strengths and talents. We strive
+        to promote optimal development in all aspects of a child's life.
+      </p>
+      <p>
+        Our primary goal is to help each child develop a healthy self-concept, confidence, curiosity, and motivation to
+        learn, and the ability to build cooperative relationships with other children and adults for life. We strive to
+        ensure that every child receives creative and fun learning experiences that support their cognitive, social,
+        emotional and physical development. Our activities and programs are all designed to engage your child's natural
+        curiosity and provide a foundation for lifelong success. Preparing your child to succeed in school and in life
+        is the core of our childcare curriculum, in line with Ontario's Pedagogy for the Early Years:
+        <i>How Does Learning Happen?</i> and <i>Early Learning For Every Child Today</i>.
+      </p>
+
+      <h2>Philosophy</h2>
+      <p>We believe that every child is unique and possesses their own temperament and learning style.</p>
+      <p>
+        We believe that children are competent, capable of complex thinking, curious and rich in potential. We are
+        committed to the "emergent curriculum" approach to program planning, in which activities "emerge" based on ideas
+        and interests from both children and staff. This spontaneous learning process prepares them for acquiring more
+        complex skills of reading, writing and mathematical reasoning.
+      </p>
+      <p>
+        We believe play is integral to children's learning and essential to quality of life in childhood. Exploration
+        and play are a child's primary way of understanding the world. Children are agents of their own learning,
+        actively building knowledge, skills, dispositions, and feelings. We are committed to fostering each child's
+        self-esteem, well-being and growing need for independence. All aspects of their development and learning are
+        interrelated and interdependent.
+      </p>
+      <p>
+        At JHCCLC, our youngest learners are supported in the development of positive and effective communication.
+        Early on, children experience meaningful opportunities and individual support related to expression and
+        self-regulation. Rich in potential and ability, children develop understanding and competence in emotional
+        expression, emotional intelligence and self-awareness. Expression is supported through observation,
+        documentation, listening, and authentic communication. Child-initiated positive communication creates a pathway
+        to self-regulation and problem solving. Through positive, self-directed problem-solving and respectful
+        discussion, the children form relationships and practice behaviours that are foundational to effective lifelong
+        communication and assist in creating a sense of belonging.
+      </p>
+      <p>
+        We use <i>How Does Learning Happen?</i> Ontario's Pedagogy for the Early Years (2014) to guide our programming
+        and pedagogy. We provide a positive framework to support our children and families in an environment that
+        promotes belonging, well-being, engagement, and expression.
+      </p>
+
+      <h3>We always:</h3>
+      <ul>
+        <li>Commit to helping children develop independence, confidence and skills for the future.</li>
+        <li>Recognize the uniqueness of each child.</li>
+        <li>Keep children healthy and safe through shared and high quality practice.</li>
+        <li>Become the catalyst for children making progress and achieving at their own pace.</li>
+        <li>Promote equality and diversity.</li>
+        <li>Make confidence an on-going priority.</li>
+        <li>Ensure that parents and families are involved, encouraged and consulted.</li>
+        <li>Make sure planning and self-evaluation is effective.</li>
+        <li>Establish an ambitious vision that everyone shares and understands.</li>
+        <li>Promote well-qualified staff and ongoing professional development.</li>
+        <li>Establish meaningful and supportive activities, and allow children to make choices.</li>
+        <li>Give children the time to think and speak.</li>
+        <li>Allow children to do things at their own pace.</li>
+        <li>Give children the skills and confidence to take the lead.</li>
+        <li>Always plan for improvement.</li>
+      </ul>
+
+      <div class="actions">
+        <a class="btn" href="/contact">Book a tour</a>
+        <a class="btn btn--ghost" href="/register">Join the waitlist</a>
+      </div>
+    </div>
+  </div>
 </Layout>

@@ -1,112 +1,109 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
 ---
 
-<Layout title="Parent Information" description="Handbooks, policies and information for Junior Hub families.">
-    <section id="banner">
-      <h2>
-        <b><span style="color: white; font-size: 125">Operation</span></b>
-      </h2>
-    </section>
+<Layout
+  title="Parent Information"
+  description="Handbooks, policies and information for Junior Hub families."
+>
+  <PageHero
+    title="Parent information"
+    lede="Policies, procedures and the parent handbook, plus how we stay in touch with families."
+    image="/images/front1.jpg"
+  >
+    <div class="actions" style="margin-top: 1.5rem">
+      <a class="btn" href="/images/_Family%20Handbook%20-%20%2011022022.pdf">Read the parent handbook</a>
+    </div>
+  </PageHero>
 
-    <!-- Main -->
-    <section id="main" class="container">
-      <section class="box special">
-        <span class="image featured"
-          ><img src="/images/pic01.jpeg" alt=""
-        /></span>
-        <h3 style="font-weight: bold; text-align: center">
-          Policies, Procedures, and Parent Handbook
-        </h3>
-        <p>
-          Our
-          <a href="/images/_Family%20Handbook%20-%20%2011022022.pdf"
-            >Parent Handbook</a
-          >
-          provides additional information about our policies and procedures.
-          All parents are expected to review the handbook at enrollment.
-        </p>
-        <h3 style="font-weight: bold; text-align: center">
-          Family Involvement
-        </h3>
-        <p>
-          JHCCLC believes that families are their child’s first and best
-          teacher. We recognize that parent partnership is a key ingredient to
-          the quality and success of our Centre. We are committed to
-          respecting the values, differences, needs and interests of
-          individual families. We encourage and welcome parents’ knowledge,
-          experience, ideas and feedback. An integral strength of JHCCLC is
-          our willingness and ability to meet the needs of the children,
-          parents and educators in a mutually beneficial partnership. It is
-          important that educators and families communicate frequently about
-          family practices at home to avoid confusion for the children. Verbal
-          or written systems are appreciated in regard to the happenings that
-          may be affecting your child, changes in a child’s physical or
-          emotional state should be reported regularly to teachers.
-          <br />
-          <br />
-          JHCCLC educators seek out ways to engage parents in a way that meets
-          their needs and builds on strengths while respecting the challenges
-          that face families. Special events and organized parent involvement
-          opportunities will be offered throughout the year.
-        </p>
-        <h3><b>Himama</b></h3>
-        <p>
-          Jr.Hub uses the Canadian child care app called HiMama. HiMama is an
-          electronic communication tool used by our educators to inform
-          parents about their child’s day. HiMama is secure, reliable, and
-          easy to use. Parents can be updated through email, text, and
-          notifications via the HiMama website and mobile app.
-        </p>
+  <div class="wrap page">
+    <div class="prose">
 
-        <h3 style="font-weight: bold; text-align: center">
-          Health and Illness
-        </h3>
-        <p>
-          Please refer to our Health and Illness Policy. Parents are required
-          to complete and submit medical information prior to their child’s
-          admission into the program, including up-to-date immunization
-          records and any pertinent medical information such as allergies and
-          other medical conditions. Communication is very important. Educators
-          and parents need to share health information daily in order to
-          minimize illnesses, germs, and diseases. Educators will make general
-          observations about the child’s health and well-being, and record it
-          on their daily attendance sheet and log book. Please see Parent
-          Handbook for further details In order to reduce the spread of
-          infections, children should stay home if they are unwell and unable
-          to fully participate in the program (inside and outside
-          activities).Jr Hub staff, students and volunteers are required to
-          follow the same procedures. Jr. Hub follows the requirements of the
-          York Regional Public Health Department as outlined in the Public
-          Health Guide For Child Care Providers .We also develop and implement
-          our own policies and procedures for certain ailments in order to
-          further reduce the spread of germs and infections to the children in
-          our care.
-        </p>
-        <h3><b>Medications</b></h3>
-        <p>
-          Please refer to our Medication Policy. Parents are strongly advised
-          to give medications to children prior to daily attendance if they
-          can be administered without affecting their daily treatment
-          schedule. When it is necessary for a drug or medication to be given
-          while in attendance, the medication must be administered to a child
-          from its original container as supplied by the pharmacist and the
-          container or package is clearly labeled with the child’s name, the
-          name of the drug or medication, the dosage of the drug or
-          medication, the date of purchase and expiration and instruction for
-          storage and administration. All drugs/medications shall be
-          accompanied by written authorization and instruction signed by the
-          parent using this form. Jr. Hub will not administer non-prescription
-          drugs. Non-prescription drugs should not be administered prior to a
-          child’s attendance to reduce a fever or mask other symptoms to keep
-          a child at the centre when they should potentially be at home or
-          visiting a doctor. Parents are not to leave any medication in their
-          child’s cubby. Please see the
-          <a href="/images/_Family%20Handbook%20-%20%2011022022.pdf"
-            >Parent Handbook</a
-          >
-          for additional details.
-        </p>
-      </section>
-    </section>
+      <h2>Policies, Procedures, and Parent Handbook</h2>
+      <p>
+      Our
+      <a href="/images/_Family%20Handbook%20-%20%2011022022.pdf"
+      >Parent Handbook</a
+      >
+      provides additional information about our policies and procedures.
+      All parents are expected to review the handbook at enrollment.
+      </p>
+      <h2>Family Involvement</h2>
+      <p>
+      JHCCLC believes that families are their child’s first and best
+      teacher. We recognize that parent partnership is a key ingredient to
+      the quality and success of our Centre. We are committed to
+      respecting the values, differences, needs and interests of
+      individual families. We encourage and welcome parents’ knowledge,
+      experience, ideas and feedback. An integral strength of JHCCLC is
+      our willingness and ability to meet the needs of the children,
+      parents and educators in a mutually beneficial partnership. It is
+      important that educators and families communicate frequently about
+      family practices at home to avoid confusion for the children. Verbal
+      or written systems are appreciated in regard to the happenings that
+      may be affecting your child, changes in a child’s physical or
+      emotional state should be reported regularly to teachers.</p>
+      <p>JHCCLC educators seek out ways to engage parents in a way that meets
+      their needs and builds on strengths while respecting the challenges
+      that face families. Special events and organized parent involvement
+      opportunities will be offered throughout the year.
+      </p>
+      <h2>Himama</h2>
+      <p>
+      Jr.Hub uses the Canadian child care app called HiMama. HiMama is an
+      electronic communication tool used by our educators to inform
+      parents about their child’s day. HiMama is secure, reliable, and
+      easy to use. Parents can be updated through email, text, and
+      notifications via the HiMama website and mobile app.
+      </p>
+      <h2>Health and Illness</h2>
+      <p>
+      Please refer to our Health and Illness Policy. Parents are required
+      to complete and submit medical information prior to their child’s
+      admission into the program, including up-to-date immunization
+      records and any pertinent medical information such as allergies and
+      other medical conditions. Communication is very important. Educators
+      and parents need to share health information daily in order to
+      minimize illnesses, germs, and diseases. Educators will make general
+      observations about the child’s health and well-being, and record it
+      on their daily attendance sheet and log book. Please see Parent
+      Handbook for further details In order to reduce the spread of
+      infections, children should stay home if they are unwell and unable
+      to fully participate in the program (inside and outside
+      activities).Jr Hub staff, students and volunteers are required to
+      follow the same procedures. Jr. Hub follows the requirements of the
+      York Regional Public Health Department as outlined in the Public
+      Health Guide For Child Care Providers .We also develop and implement
+      our own policies and procedures for certain ailments in order to
+      further reduce the spread of germs and infections to the children in
+      our care.
+      </p>
+      <h2>Medications</h2>
+      <p>
+      Please refer to our Medication Policy. Parents are strongly advised
+      to give medications to children prior to daily attendance if they
+      can be administered without affecting their daily treatment
+      schedule. When it is necessary for a drug or medication to be given
+      while in attendance, the medication must be administered to a child
+      from its original container as supplied by the pharmacist and the
+      container or package is clearly labeled with the child’s name, the
+      name of the drug or medication, the dosage of the drug or
+      medication, the date of purchase and expiration and instruction for
+      storage and administration. All drugs/medications shall be
+      accompanied by written authorization and instruction signed by the
+      parent using this form. Jr. Hub will not administer non-prescription
+      drugs. Non-prescription drugs should not be administered prior to a
+      child’s attendance to reduce a fever or mask other symptoms to keep
+      a child at the centre when they should potentially be at home or
+      visiting a doctor. Parents are not to leave any medication in their
+      child’s cubby. Please see the
+      <a href="/images/_Family%20Handbook%20-%20%2011022022.pdf"
+      >Parent Handbook</a
+      >
+      for additional details.
+      </p>
+
+    </div>
+  </div>
 </Layout>

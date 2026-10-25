@@ -2,25 +2,48 @@
 import { site } from "../data/site";
 const year = new Date().getFullYear();
 ---
-<!-- Footer -->
-<footer id="footer">
-  <ul class="icons">
-    {
-      site.social.map((s) => (
-        <li>
-          <a href={s.href} class={s.icon}><span class="label">{s.label}</span></a>
-        </li>
-      ))
-    }
-    <li>
-      <a href={`mailto:${site.email}`} class="icon fa-envelope"><span class="label">Email</span></a>
-    </li>
-    <li>
-      <a href={site.mapUrl} class="icon solid fa-map-marker-alt"><span class="label">Map</span></a>
-    </li>
-  </ul>
-  <ul class="copyright">
-    <li>&copy; {year} {site.fullName}. All rights reserved.</li>
-    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-  </ul>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/">
+          <img src="/images/jhlogo.png" alt="" width="45" height="45" />
+          <span>Junior Hub</span>
+        </a>
+        <p style="margin-top: 0.9rem">
+          Licensed child care and learning for ages 18 months to 6, near Hwy 7, 407 and Yonge Street.
+        </p>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <address>
+          <a href={site.address.mapUrl}>{site.address.street}</a>
+        </address>
+        <ul style="margin-top: 0.8rem">
+          {site.hours.map((h) => (<li>{h.days}: {h.time}</li>))}
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href={`tel:${site.phone}`}>{site.phone}</a></li>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          {site.social.map((s) => (<li><a href={s.href}>{s.label}</a></li>))}
+        </ul>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/program">Programs</a></li>
+          <li><a href="/pi">Parent information</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/register">Join the waitlist</a></li>
+          <li><a href="/hiring">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__legal">&copy; {year} {site.fullName}</p>
+  </div>
 </footer>
