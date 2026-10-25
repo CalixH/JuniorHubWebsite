@@ -15,6 +15,8 @@ const fullTitle = title ? `${title} | Junior Hub` : "Junior Hub | Child Care & L
 // build.format is "file", so pathnames can end in .html; publish the clean URL.
 const cleanPath = Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/") || "/";
 const canonical = new URL(cleanPath, Astro.site).toString();
+// Changes every build so browsers never keep a stale copy of site.css.
+const cssVersion = Date.now();
 
 // Optional Google Analytics 4. Set PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in Netlify's
 // environment variables to turn it on. Leave unset for no tracking.
@@ -22,11 +24,6 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
-<!--
-  Alpha by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -41,7 +38,14 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL("/images/jhlogo.png", Astro.site).toString()} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600;700&display=swap"
+    />
     <link rel="stylesheet" href="/assets/css/output.css" />
+    <link rel="stylesheet" href={`/assets/css/site.css?v=${cssVersion}`} />
     {
       gaId && (
         <>
@@ -58,21 +62,12 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
       )
     }
   </head>
-  <body class="landing is-preload">
-    <button onclick="topFunction()" id="myBtn" title="Go to top">☝️</button>
-    <div id="page-wrapper">
-      <Header />
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <Header />
+    <main id="content">
       <slot />
-      <Footer />
-    </div>
-
-    <!-- Scripts -->
-    <script is:inline src="/assets/js/jquery.min.js"></script>
-    <script is:inline src="/assets/js/jquery.dropotron.min.js"></script>
-    <script is:inline src="/assets/js/jquery.scrollex.min.js"></script>
-    <script is:inline src="/assets/js/browser.min.js"></script>
-    <script is:inline src="/assets/js/breakpoints.min.js"></script>
-    <script is:inline src="/assets/js/util.js"></script>
-    <script is:inline src="/assets/js/main.js"></script>
+    </main>
+    <Footer />
   </body>
 </html>
