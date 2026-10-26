@@ -338,7 +338,8 @@ a:hover { text-decoration-color: var(--leaf); }
 .cols { display: grid; gap: 2rem 3rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
 .cols > * { margin: 0; }
 .weeks { display: grid; gap: 2.5rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin-top: 1.5rem; }
-.weeks h3 { margin: 0; font-size: 1.25rem; }
+.weeks h3 { margin: 0; font-size: 1.25rem; display: flex; align-items: center; gap: 0.65rem; }
+.weeks h3 img { flex: none; width: 2.4rem; height: 2.4rem; padding: 0.4rem; border-radius: 50%; background: var(--sand-light); box-sizing: border-box; object-fit: contain; }
 .weeks ul { margin: 0.6rem 0 0; }
 table.table { width: 100%; max-width: 38rem; border-collapse: collapse; }
 .table th, .table td { padding: 0.7rem 0.5rem 0.7rem 0; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
