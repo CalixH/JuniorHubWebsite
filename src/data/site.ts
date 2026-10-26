@@ -26,7 +26,7 @@ export const site = {
     text: "Toddler, preschool, JK and SK, plus PA days, March break and summer camp.",
   },
   cwelcc: {
-    text: "Junior Hub is enrolled in the Canada-Wide Early Learning and Child Care (CWELCC) system, and fee subsidy is available.",
+    text: "Enrolled in CWELCC, so fee subsidy is available.",
     url: "https://www.york.ca/support/childrens-services/child-care-information-parents",
   },
   social: [
