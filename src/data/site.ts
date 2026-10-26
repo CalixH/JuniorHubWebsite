@@ -26,11 +26,14 @@ export const site = {
     text: "Toddler, preschool, JK and SK, plus PA days, March break and summer camp.",
   },
   cwelcc: {
-    text: "Enrolled in CWELCC, so fee subsidy is available.",
+    text: "Proudly enrolled in CWELCC, fee subsidy is available.",
     url: "https://www.york.ca/support/childrens-services/child-care-information-parents",
   },
   social: [
-    { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100080303237855" },
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=100080303237855",
+    },
     { label: "Instagram", href: "https://www.instagram.com/infojuniorhub/" },
     { label: "X (Twitter)", href: "https://twitter.com/JuniorHubCC" },
   ],
